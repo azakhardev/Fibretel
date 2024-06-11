@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4Eo37mJjOXY=",
+  "dgSpecHash": "Oyd3Nwy97mE=",
   "success": true,
-  "projectFilePath": "D:\\Visual Studio\\Bigger Projects\\RealEstate\\RealEstate\\RealEstate.csproj",
+  "projectFilePath": "D:\\GitHub\\RealEstate\\RealEstate\\RealEstate.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\artem\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\artem\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",

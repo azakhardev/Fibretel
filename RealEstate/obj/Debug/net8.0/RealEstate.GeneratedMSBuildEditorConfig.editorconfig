@@ -9,47 +9,47 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RealEstate
 build_property.RootNamespace = RealEstate
-build_property.ProjectDir = D:\Visual Studio\Bigger Projects\RealEstate\RealEstate\
+build_property.ProjectDir = D:\GitHub\RealEstate\RealEstate\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Visual Studio\Bigger Projects\RealEstate\RealEstate
+build_property.MSBuildProjectDirectory = D:\GitHub\RealEstate\RealEstate
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Visual Studio/Bigger Projects/RealEstate/RealEstate/Views/About/Index.cshtml]
+[D:/GitHub/RealEstate/RealEstate/Views/About/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio/Bigger Projects/RealEstate/RealEstate/Views/Contacts/Index.cshtml]
+[D:/GitHub/RealEstate/RealEstate/Views/Contacts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio/Bigger Projects/RealEstate/RealEstate/Views/Home/Index.cshtml]
+[D:/GitHub/RealEstate/RealEstate/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio/Bigger Projects/RealEstate/RealEstate/Views/Offer/Index.cshtml]
+[D:/GitHub/RealEstate/RealEstate/Views/Offer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZmZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio/Bigger Projects/RealEstate/RealEstate/Views/Shared/Error.cshtml]
+[D:/GitHub/RealEstate/RealEstate/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio/Bigger Projects/RealEstate/RealEstate/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/GitHub/RealEstate/RealEstate/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio/Bigger Projects/RealEstate/RealEstate/Views/_ViewImports.cshtml]
+[D:/GitHub/RealEstate/RealEstate/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio/Bigger Projects/RealEstate/RealEstate/Views/_ViewStart.cshtml]
+[D:/GitHub/RealEstate/RealEstate/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Visual Studio/Bigger Projects/RealEstate/RealEstate/Views/Shared/_GuestLayout.cshtml]
+[D:/GitHub/RealEstate/RealEstate/Views/Shared/_GuestLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9HdWVzdExheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-yk6v5a3kj7
