@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\Images\\Main\\placeholderFullHD2.png"
     },
     {
+      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\Images\\Offers\\Property_1.jpg",
+      "PackagePath": "staticwebassets\\Images\\Offers\\Property_1.jpg"
+    },
+    {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\about.css",
       "PackagePath": "staticwebassets\\css\\about.css"
     },
@@ -35,6 +39,14 @@
     {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\layout.css",
       "PackagePath": "staticwebassets\\css\\layout.css"
+    },
+    {
+      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\offer.css",
+      "PackagePath": "staticwebassets\\css\\offer.css"
+    },
+    {
+      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\offerDetail.css",
+      "PackagePath": "staticwebassets\\css\\offerDetail.css"
     },
     {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\site.css",

@@ -1,0 +1,39 @@
+﻿content {
+    gap: 20px;
+    padding-inline: 5px;
+}
+
+    content .card {
+        width: 100% !important;
+        max-width: 440px;
+    }
+
+.card h6 {
+    color:forestgreen !important;
+}
+
+@media (min-width: 576px) {
+    
+}
+
+@media (min-width: 1024px) {
+    content {
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+}
+
+@media (min-width: 1360px) {
+    content {
+        padding-inline: 5%;
+    }
+}
+
+@media (min-width: 1920px) {
+    content {
+        padding-inline: 15%;
+    }
+}
+
+@media (min-height: 1081px) {
+}

@@ -1,5 +1,26 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using RealEstate.Models.Entities
+<head>
+    <link rel="stylesheet" href="~/css/offer.css" />
+</head>
+
 @{
+    ViewData["Title"] = "Nabídka";
 }
+
+@model List<Offer>
+
+<content>
+
+    @foreach (Offer offer in Model)
+    {
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="~/@offer.PreviewPhoto" alt="" title="@offer.Name">
+            <div class="card-body">
+                <h5 class="card-title">@offer.Name</h5>
+                <h6 class="card-subtitle mb-2 text-muted">@offer.Price Kč</h6>
+                <p class="card-text">@offer.SmallDescription</p>                
+                <a asp-controller="Offer" asp-action="Detail" asp-route-Id="@offer.Id" class="btn btn-primary">View</a>
+            </div>
+        </div>
+    }
+</content>

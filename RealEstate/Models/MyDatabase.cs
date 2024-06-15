@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Org.BouncyCastle.Asn1.Ocsp;
+using RealEstate.Models.Entities;
 
 namespace RealEstate.Models
 {
@@ -7,9 +8,13 @@ namespace RealEstate.Models
     {
         public DbSet<Account> Accounts { get; set; }     
 
+        public DbSet<Offer> Offers { get; set; }
+
+        public DbSet<Photo> Photos { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("server=localhost;database=myportfolioweb;user=root;password=;SslMode=none");
+            optionsBuilder.UseMySQL("server=localhost;database=realestate;user=root;password=;SslMode=none");
         }
     }
 }
