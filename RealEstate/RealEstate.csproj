@@ -7,10 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\js\offer.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\offer.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Components\" />
     <Folder Include="Views\Shared\Components\" />
     <Folder Include="wwwroot\Images\Main\" />
     <Folder Include="wwwroot\Images\Offers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\offer.js" />
   </ItemGroup>
 
   <ItemGroup>

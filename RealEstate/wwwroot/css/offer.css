@@ -1,6 +1,13 @@
 ﻿content {
     gap: 20px;
-    padding-inline: 5px;
+    padding-inline: 5px;    
+}
+
+.offers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
 }
 
     content .card {
@@ -8,24 +15,63 @@
         max-width: 440px;
     }
 
-.card h6 {
-    color:forestgreen !important;
+
+.offer-card-info {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+
+.card-text {
+    overflow-y:scroll;
+    max-height:200px;
+}
+
+.card .money {
+    color: forestgreen !important;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card .btn {
+    width:100%;
+}
+
+.btn-wrapper {
+    display: flex;
+    flex-direction:column;
+    flex-grow:1;
+    justify-content:end;
+}
+
+.buttons {
+    width:100%;;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
 }
 
 @media (min-width: 576px) {
-    
 }
 
 @media (min-width: 1024px) {
-    content {
-        flex-direction:row;
-        flex-wrap:wrap;
+    .offers {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 }
 
 @media (min-width: 1360px) {
     content {
         padding-inline: 5%;
+    }
+    .card-text {        
+        max-height: 350px;
     }
 }
 

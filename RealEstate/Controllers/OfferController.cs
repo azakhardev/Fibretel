@@ -8,16 +8,17 @@ namespace RealEstate.Controllers
     {
         MyDatabase myDb = new MyDatabase();
 
-        public IActionResult Index()
+        public IActionResult Index(int id = 1)
         {
             List<Offer> offers = myDb.Offers.ToList();
+            ViewBag.Page = id;
             return View(offers);
         }
 
-        public IActionResult Detail(int Id) 
+        public IActionResult Detail(int id) 
         {
-            Offer offer = this.myDb.Offers.Find(Id);
-            ViewBag.Photos = this.myDb.Photos.Where(x => x.OfferId == Id).ToList();
+            Offer offer = this.myDb.Offers.Find(id);
+            ViewBag.Photos = this.myDb.Photos.Where(x => x.OfferId == id).ToList();
             return View(offer);
         }
     }
