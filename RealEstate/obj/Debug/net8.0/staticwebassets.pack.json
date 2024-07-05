@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets\\css\\about.css"
     },
     {
+      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\contancts.css",
+      "PackagePath": "staticwebassets\\css\\contancts.css"
+    },
+    {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\home.css",
       "PackagePath": "staticwebassets\\css\\home.css"
     },
@@ -67,6 +71,10 @@
     {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\js\\about.js",
       "PackagePath": "staticwebassets\\js\\about.js"
+    },
+    {
+      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\js\\contacts.js",
+      "PackagePath": "staticwebassets\\js\\contacts.js"
     },
     {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\js\\home.js",

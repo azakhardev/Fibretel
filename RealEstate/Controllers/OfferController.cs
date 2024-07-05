@@ -15,7 +15,7 @@ namespace RealEstate.Controllers
             List<Service> services = myDb.Services.ToList();
             
             ViewBag.Page = id;
-            ViewBag.Services = services;                        
+            ViewBag.Services = services;                
             return View();
         }
                 

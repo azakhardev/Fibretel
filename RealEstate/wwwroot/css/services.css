@@ -70,19 +70,38 @@ content {
 }
 
 .btn-more {
-    color:white;
-    background-color: cornflowerblue;
-    padding-inline: 20px;
-    padding-block: 8px;
-    font-size: 25px;
-    border-radius: 12px;
+    background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    padding: 0.5rem 1.75rem;
+    text-decoration: none;
+    width: 100%;
+    border: 0;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
+    .btn-more:hover {
+        background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+    }
+
+.noDisplay {
+    display: none !important;
+}
 @media (min-width: 768px) {
     .services {
         display:grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    }
+    .btn-more {
+        padding: 0.75rem 2rem;
     }
 }
 
@@ -95,6 +114,7 @@ content {
     }
     content .service-card {
         max-width: 450px;
+        min-height: 600px;
     }
 }
 

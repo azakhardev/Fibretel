@@ -12,6 +12,8 @@ namespace RealEstate.Models
 
         public DbSet<Photo> Photos { get; set; }
 
+        public DbSet<Entities.Request> Requests { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySQL("server=localhost;database=realestate;user=root;password=;SslMode=none");

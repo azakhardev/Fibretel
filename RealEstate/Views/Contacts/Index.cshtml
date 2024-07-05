@@ -1,1 +1,48 @@
-﻿
+﻿@using RealEstate.Models;
+@using RealEstate.Models.Entities;
+<head>
+    <link rel="stylesheet" href="~/css/contancts.css" />
+</head>
+
+@{
+    ViewData["Title"] = "Ozvěte se nám";
+}
+
+@model Request
+
+<content>
+    <div class="form-wrap">
+        <form asp-controller="Contacts" asp-action="Index">
+            <div class="form-group">
+                <label>Jméno:</label>
+                <input type="text" class="form-control" placeholder="Vaše jméno" asp-for="Name">
+            </div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="text" class="form-control" placeholder="Váš Email" asp-for="Email" required>
+            </div>
+            <div class="form-group">
+                <label>Služba</label>
+                <select class="form-control" asp-for="Service" required>
+                    <option value="" disabled selected>Vyberte z možností</option>
+                    @foreach (string service in ViewBag.Services)
+                    {
+                        <option value="@service">@service</option>
+                    }
+                    <option value="Jiné">Jiné</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Váš požadavek</label>
+                <textarea class="form-control" rows="5" asp-for="Text" required>Zadejte text</textarea>
+            </div>
+
+            <button type="submit" class="mt-2 btn btn-primary" style="float:right">Odeslat</button>
+
+
+        </form>
+    </div>
+</content>
+
+<div style="height:5px;"></div>
+<script src="~/js/contacts.js"></script>

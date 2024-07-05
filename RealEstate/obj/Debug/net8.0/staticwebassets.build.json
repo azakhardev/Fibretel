@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vNeww4iDWSzL5cUUgvGwz3ifTrpJ6ksZ5auiJrauPvk=",
+  "Hash": "gt2IRufHrFE5DAvjWeazd1bLXMCJ3ZU5FNUHILw6eBU=",
   "Source": "RealEstate",
   "BasePath": "_content/RealEstate",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\about.css"
+    },
+    {
+      "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\contancts.css",
+      "SourceId": "RealEstate",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\",
+      "BasePath": "_content/RealEstate",
+      "RelativePath": "css/contancts.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\contancts.css"
     },
     {
       "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\home.css",
@@ -357,6 +376,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\about.js"
+    },
+    {
+      "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\js\\contacts.js",
+      "SourceId": "RealEstate",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\",
+      "BasePath": "_content/RealEstate",
+      "RelativePath": "js/contacts.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\contacts.js"
     },
     {
       "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\js\\home.js",

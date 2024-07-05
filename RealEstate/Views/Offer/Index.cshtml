@@ -47,16 +47,22 @@
         {
             <div class="service-card">
                 <div class="card-background" style="background-image:url('@service.Photo'); background-size:cover; background-repeat:no-repeat; width:100%;">
-                @*     <div class="card-background">
-                    <img src="~/@service.Photo" style="height:100%; width:100%; object-fit:contain;"/>
-                    </div> *@
+                    @*     <div class="card-background">
+                <img src="~/@service.Photo" style="height:100%; width:100%; object-fit:contain;"/>
+                </div> *@
                     <div class="card-content">
                         <div class="service-card-header">
                             <h3 class="service-name">@service.Name</h3>
                         </div>
                         <div class="service-card-footer">
                             <h5>Cena od @service.Price Kč</h5>
-                            <h6>@service.Requests+ zájemců</h6>
+                            @{
+                                int count = (service.Requests / 100) * 100;
+                            }
+                            @if (count > 0)
+                            {
+                                <h6>@count+ zájemců</h6>
+                            }
                             <a asp-controller="Offer" asp-action="Detail" asp-route-id="@service.Id" class="btn btn-primary" style="float:right">Podrobnosti</a>
                         </div>
                     </div>
@@ -71,4 +77,5 @@
 </content>
 
 <div style="height:5px;"></div>
-<script src="~/js/offer.js"></script>
+@* <script src="~/js/offer.js"></script> *@
+<script src="~/js/services.js"></script>
