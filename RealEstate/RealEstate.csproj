@@ -18,7 +18,7 @@
     <Folder Include="Components\" />
     <Folder Include="Views\Shared\Components\" />
     <Folder Include="wwwroot\Images\Main\" />
-    <Folder Include="wwwroot\Images\Offers\" />
+    <Folder Include="wwwroot\Images\Services\" />
   </ItemGroup>
 
   <ItemGroup>

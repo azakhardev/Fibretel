@@ -1,0 +1,123 @@
+﻿
+content {
+    gap: 20px;
+    padding-inline: 5px;
+    transition: ease 1s;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    width: 100%;
+}
+
+.service-card {
+    display: flex;
+    min-height: 400px;
+    width: 100%;
+    transition: 0.2s ease;
+    padding: 15px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid blue;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    padding: 7px;
+    opacity: 0;
+    transition: 0.2s ease;
+}
+
+.service-card .money {
+    color: forestgreen !important;
+}
+
+.card-background {
+    border: 0.5px solid black;
+    border-radius: 15px;
+    transition: 0.2s ease;
+    background-position:center;
+}
+
+.service-card:hover {
+    position: relative;
+    cursor: pointer;
+    padding: 0px;    
+}
+
+    .service-card:hover .card-content {
+        opacity: 1;
+    }
+
+    .service-card:hover .card-background {
+        border:none;
+    }
+
+.service-card-header {
+    flex:4;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.service-card-footer {
+    flex:1;
+}
+
+.btn-more {
+    color:white;
+    background-color: cornflowerblue;
+    padding-inline: 20px;
+    padding-block: 8px;
+    font-size: 25px;
+    border-radius: 12px;
+}
+
+@media (min-width: 768px) {
+    .services {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .services {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    content .service-card {
+        max-width: 450px;
+    }
+}
+
+@media (min-width: 1360px) {
+    content {
+        padding-inline: 8%;
+    }
+        content .service-card {
+            max-width: 380px;
+        }
+}
+
+@media (min-width: 1920px) {
+    content {
+        padding-inline: 15%;
+    }
+        content .service-card {
+            max-width: 434px;
+        }
+}
+
+@media (min-width: 2560px) {
+    content .service-card {
+        max-width: 560px;
+    }
+}

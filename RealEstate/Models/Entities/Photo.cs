@@ -7,7 +7,7 @@ namespace RealEstate.Models.Entities
     {
         public int Id { get; set; }
 
-        public int OfferId { get; set; }
+        public int ServiceId { get; set; }
 
         public string Path { get; set; }
     }

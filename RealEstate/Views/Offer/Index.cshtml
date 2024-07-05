@@ -1,60 +1,72 @@
-﻿@using RealEstate.Models.Entities
+﻿@using RealEstate.Models;
+@using RealEstate.Models.Entities;
 <head>
     <link rel="stylesheet" href="~/css/offer.css" />
+    <link rel="stylesheet" href="~/css/services.css" />
 </head>
 
 @{
-    ViewData["Title"] = "Nabídka";
+    ViewData["Title"] = "Nabídka služeb";
     int counter = 0;
 }
 
-@model List<Offer>
-
 <content>
-    <div class="filter">
-
+    @*<div class="offers">
+    @if (ViewBag.Services.Count > 0)
+    {
+    @foreach (Service service in ViewBag.Services)
+    {
+    if (counter < ViewBag.Page * 12 && counter >= ViewBag.Page * 12 - 12)
+    {
+    <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="~/@service.Photo" alt="" title="@service.Name">
+    <div class="card-body">
+    <h5 class="card-title">@service.Name</h5>
+    <h6 class="card-subtitle mb-2 text-muted money">Cena od @service.Price Kč</h6>
+    <p class="card-text">@service.PreviewDescription</p>
+    <div class="btn-wrapper">
+    <a asp-controller="Offer" asp-action="Detail" asp-route-id="@service.Id" class="btn btn-primary">View</a>
     </div>
-    <div class="offers">
-        @foreach (Offer offer in Model)
+    </div>
+    </div>
+    }
+    counter++;
+    }
+
+    }
+
+    else
+    {
+    <div style="position:absolute; display: flex; justify-content: center; align-items:center; height:60vh">
+    <h2>Je nám líto, ale momentálně neposkytujeme žádné služby</h2>
+    </div>
+    }
+    </div>*@
+    <div class="services">
+        @foreach (Service service in ViewBag.Services)
         {
-            if (counter < ViewBag.Page * 15 && counter >= ViewBag.Page * 15 - 15)
-            {
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="~/@offer.PreviewPhoto" alt="" title="@offer.Name">
-                    <div class="card-body">
-                        <h5 class="card-title">@offer.Name</h5>
-                        <div class="offer-card-info">
-                            <h6 class="card-subtitle mb-2 text-muted money">@offer.Price Kč</h6>
-                            <h6 class="card-subtitle mb-2 text-muted">@offer.Area m<sup>2</sup></h6>
+            <div class="service-card">
+                <div class="card-background" style="background-image:url('@service.Photo'); background-size:cover; background-repeat:no-repeat; width:100%;">
+                @*     <div class="card-background">
+                    <img src="~/@service.Photo" style="height:100%; width:100%; object-fit:contain;"/>
+                    </div> *@
+                    <div class="card-content">
+                        <div class="service-card-header">
+                            <h3 class="service-name">@service.Name</h3>
                         </div>
-                        <p class="card-text">@offer.SmallDescription</p>
-                        <div class="btn-wrapper">
-                            <a asp-controller="Offer" asp-action="Detail" asp-route-id="@offer.Id" class="btn btn-primary">View</a>
+                        <div class="service-card-footer">
+                            <h5>Cena od @service.Price Kč</h5>
+                            <h6>@service.Requests+ zájemců</h6>
+                            <a asp-controller="Offer" asp-action="Detail" asp-route-id="@service.Id" class="btn btn-primary" style="float:right">Podrobnosti</a>
                         </div>
                     </div>
                 </div>
-            }
+            </div>
             counter++;
         }
     </div>
-    <div class="buttons">
-        @if (ViewBag.Page > 1)
-        {
-            <a asp-controller="Offer" asp-action="Index" asp-route-id="@(ViewBag.Page - 1)" class="btn btn-primary">Previous</a>
-        }
-        else
-        {
-            <a class="btn btn-primary">Previous</a>
-        }
-
-        @if (ViewBag.Page * 15 < Model.Count)
-        {
-            <a asp-controller="Offer" asp-action="Index" asp-route-id="@(ViewBag.Page + 1)" class="btn btn-primary">Next</a>
-        }
-        else
-        {
-            <a class="btn btn-primary">Next</a>
-        }
+    <div>
+        <button class="btn-more">Více</button>
     </div>
 </content>
 

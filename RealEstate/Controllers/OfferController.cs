@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using RealEstate.Models;
 using RealEstate.Models.Entities;
 
@@ -8,18 +9,22 @@ namespace RealEstate.Controllers
     {
         MyDatabase myDb = new MyDatabase();
 
+        [HttpGet]
         public IActionResult Index(int id = 1)
         {
-            List<Offer> offers = myDb.Offers.ToList();
+            List<Service> services = myDb.Services.ToList();
+            
             ViewBag.Page = id;
-            return View(offers);
+            ViewBag.Services = services;                        
+            return View();
         }
-
-        public IActionResult Detail(int id) 
+                
+        [HttpGet]
+        public IActionResult Detail(int id)
         {
-            Offer offer = this.myDb.Offers.Find(id);
-            ViewBag.Photos = this.myDb.Photos.Where(x => x.OfferId == id).ToList();
+            Service offer = this.myDb.Services.Find(id);
+            ViewBag.Photos = this.myDb.Photos.Where(x => x.ServiceId == id).ToList();
             return View(offer);
-        }
+        }        
     }
 }

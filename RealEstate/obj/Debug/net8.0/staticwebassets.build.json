@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AdrPft3F/q1AKrfKcJSom2qHkhDeGc5NkCeWuyxZDaQ=",
+  "Hash": "vNeww4iDWSzL5cUUgvGwz3ifTrpJ6ksZ5auiJrauPvk=",
   "Source": "RealEstate",
   "BasePath": "_content/RealEstate",
   "Mode": "Default",
@@ -150,6 +150,25 @@
       "OriginalItemSpec": "wwwroot\\css\\offerDetail.css"
     },
     {
+      "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\services.css",
+      "SourceId": "RealEstate",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\",
+      "BasePath": "_content/RealEstate",
+      "RelativePath": "css/services.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\services.css"
+    },
+    {
       "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\site.css",
       "SourceId": "RealEstate",
       "SourceType": "Discovered",
@@ -283,12 +302,12 @@
       "OriginalItemSpec": "wwwroot\\Images\\Main\\placeholderFullHD2.png"
     },
     {
-      "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\Images\\Offers\\Property_1.jpg",
+      "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\Images\\Services\\Property_1.jpg",
       "SourceId": "RealEstate",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\",
       "BasePath": "_content/RealEstate",
-      "RelativePath": "Images/Offers/Property_1.jpg",
+      "RelativePath": "Images/Services/Property_1.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -299,7 +318,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Offers\\Property_1.jpg"
+      "OriginalItemSpec": "wwwroot\\Images\\Services\\Property_1.jpg"
+    },
+    {
+      "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\Images\\Services\\Toilet.jpg",
+      "SourceId": "RealEstate",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\",
+      "BasePath": "_content/RealEstate",
+      "RelativePath": "Images/Services/Toilet.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Services\\Toilet.jpg"
     },
     {
       "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\js\\about.js",

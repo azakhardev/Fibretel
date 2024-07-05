@@ -1,6 +1,32 @@
 ﻿content {
     gap: 20px;
-    padding-inline: 5px;    
+    padding-inline: 5px;
+}
+
+.filter-form {
+    transition: 0.5s ease;
+    height: auto;
+    max-height: 500px;
+}
+
+.filter-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 10px;
+    padding-block: 5px;
+    font-size: 40px;
+    background-color: #d2d2d6;
+    color: white;
+    /*background-color: lavender;*/
+    font-family: 'Times New Roman', Times, serif;
+    overflow: hidden;
+    cursor: pointer;
+    border: .1px solid black;
+    transition: 0.5s;
+    max-height: 50px;
+    opacity: 1;
 }
 
 .offers {
@@ -10,22 +36,20 @@
     gap: 10px;
 }
 
-    content .card {
-        width: 100% !important;
-        max-width: 440px;
-    }
-
+content .card {
+    width: 100% !important;
+    max-width: 440px;
+}
 
 .offer-card-info {
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
-
 .card-text {
-    overflow-y:scroll;
-    max-height:200px;
+    overflow-y: scroll;
+    max-height: 200px;
 }
 
 .card .money {
@@ -38,24 +62,37 @@
 }
 
 .card .btn {
-    width:100%;
+    width: 100%;
 }
 
 .btn-wrapper {
     display: flex;
-    flex-direction:column;
-    flex-grow:1;
-    justify-content:end;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: end;
 }
 
 .buttons {
-    width:100%;;
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-@media (min-width: 576px) {
+.hidden {
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.invisible {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .filter {
+        width: 440px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -68,9 +105,10 @@
 
 @media (min-width: 1360px) {
     content {
-        padding-inline: 5%;
+        padding-inline: 8%;
     }
-    .card-text {        
+
+    .card-text {
         max-height: 350px;
     }
 }
@@ -79,7 +117,22 @@
     content {
         padding-inline: 15%;
     }
+
+        content .card {
+            max-width: 434px;
+        }
+
+    .filter {
+        width: 474px;
+    }
 }
 
-@media (min-height: 1081px) {
+@media (min-width: 2560px) {
+    content .card {
+        max-width: 560px;
+    }
+
+    .filter {
+        width: 600px;
+    }
 }

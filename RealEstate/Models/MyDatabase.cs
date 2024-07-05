@@ -8,7 +8,7 @@ namespace RealEstate.Models
     {
         public DbSet<Account> Accounts { get; set; }     
 
-        public DbSet<Offer> Offers { get; set; }
+        public DbSet<Service> Services { get; set; }
 
         public DbSet<Photo> Photos { get; set; }
 
