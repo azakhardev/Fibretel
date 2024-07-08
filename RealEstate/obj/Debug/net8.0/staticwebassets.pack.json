@@ -37,6 +37,14 @@
       "PackagePath": "staticwebassets\\css\\about.css"
     },
     {
+      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\adminLayout.css",
+      "PackagePath": "staticwebassets\\css\\adminLayout.css"
+    },
+    {
+      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\adminServices.css",
+      "PackagePath": "staticwebassets\\css\\adminServices.css"
+    },
+    {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\contancts.css",
       "PackagePath": "staticwebassets\\css\\contancts.css"
     },
@@ -47,6 +55,10 @@
     {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\layout.css",
       "PackagePath": "staticwebassets\\css\\layout.css"
+    },
+    {
+      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\offer.css",

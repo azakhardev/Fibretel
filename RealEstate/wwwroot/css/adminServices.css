@@ -1,0 +1,12 @@
+﻿
+
+@media (min-width: 790px) {
+    table {
+        margin-block: 10px;
+        margin-inline: 15px;
+        width: 98% !important;
+    }
+}
+
+@media (min-width: 1920px) {
+}

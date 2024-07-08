@@ -10,46 +10,12 @@
     int counter = 0;
 }
 
-<content>
-    @*<div class="offers">
-    @if (ViewBag.Services.Count > 0)
-    {
-    @foreach (Service service in ViewBag.Services)
-    {
-    if (counter < ViewBag.Page * 12 && counter >= ViewBag.Page * 12 - 12)
-    {
-    <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="~/@service.Photo" alt="" title="@service.Name">
-    <div class="card-body">
-    <h5 class="card-title">@service.Name</h5>
-    <h6 class="card-subtitle mb-2 text-muted money">Cena od @service.Price Kč</h6>
-    <p class="card-text">@service.PreviewDescription</p>
-    <div class="btn-wrapper">
-    <a asp-controller="Offer" asp-action="Detail" asp-route-id="@service.Id" class="btn btn-primary">View</a>
-    </div>
-    </div>
-    </div>
-    }
-    counter++;
-    }
-
-    }
-
-    else
-    {
-    <div style="position:absolute; display: flex; justify-content: center; align-items:center; height:60vh">
-    <h2>Je nám líto, ale momentálně neposkytujeme žádné služby</h2>
-    </div>
-    }
-    </div>*@
+<content>   
     <div class="services">
         @foreach (Service service in ViewBag.Services)
         {
             <div class="service-card">
                 <div class="card-background" style="background-image:url('@service.Photo'); background-size:cover; background-repeat:no-repeat; width:100%;">
-                    @*     <div class="card-background">
-                <img src="~/@service.Photo" style="height:100%; width:100%; object-fit:contain;"/>
-                </div> *@
                     <div class="card-content">
                         <div class="service-card-header">
                             <h3 class="service-name">@service.Name</h3>
@@ -77,5 +43,4 @@
 </content>
 
 <div style="height:5px;"></div>
-@* <script src="~/js/offer.js"></script> *@
 <script src="~/js/services.js"></script>

@@ -1,0 +1,33 @@
+﻿@using RealEstate.Models;
+@using RealEstate.Models.Entities;
+
+@{
+    ViewData["Title"] = "Administrace";
+    Layout = "_AdminLayout";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/adminServices.css" />
+</head>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Služba</th>
+            <th scope="col">Cena od</th>
+            <th scope="col">Akce</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Service service in @ViewBag.Services)
+        {
+            <tr>
+                <th scope="row">@service.Id</th>
+                <td>@service.Name</td>
+                <td>@service.Price Kč</td>
+                <td><a class="btn btn-danger">Smazat</a> <a class="btn btn-primary">Upravit</a> </td>
+            </tr>
+        }
+    </tbody>
+</table>

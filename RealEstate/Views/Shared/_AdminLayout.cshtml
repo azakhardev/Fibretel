@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RealEstate</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/RealEstate.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/adminLayout.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="infoBar">
+        <div>Přihlášený uživatel: @ViewBag.LoggedAs</div>
+        <div><a asp-controller="Admin" asp-action="Logout">Odhlásit se</a></div>
+    </div>
+    <div class="layout-wrapper">
+        <header>
+            <div class="col-4">
+                <div class="list-group" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="services" role="tab">Služby</a>
+                    <a class="list-group-item list-group-item-action" id="requests" role="tab">Žádosti</a>
+                    <a class="list-group-item list-group-item-action" id="account-settings" role="tab">Nastavení účtu</a>
+                    <a class="list-group-item list-group-item-action" id="accounts-management" role="tab">Správa účtu</a>
+                </div>
+        </header>
+        <div class="mainContainer">
+            <main role="main" @* class="pb-3" *@>
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
