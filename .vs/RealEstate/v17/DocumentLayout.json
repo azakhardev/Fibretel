@@ -3,84 +3,36 @@
   "WorkspaceRootPath": "D:\\GitHub\\RealEstate\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\views\\admin\\services.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\views\\admin\\services.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\wwwroot\\js\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\wwwroot\\js\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\attributes\\authorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\attributes\\authorizeattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\views\\admin\\services.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\views\\admin\\services.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\wwwroot\\css\\adminservices.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\wwwroot\\css\\adminservices.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\controllers\\offercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\controllers\\offercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\models\\entities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\models\\entities\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\views\\contacts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\views\\contacts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\models\\entities\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\models\\entities\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\models\\mydatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\models\\mydatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\models\\entities\\photo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\models\\entities\\photo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\views\\offer\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\views\\offer\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\wwwroot\\css\\about.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\wwwroot\\css\\about.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\models\\dto\\offerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\models\\dto\\offerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|d:\\github\\realestate\\realestate\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\RealEstate.csproj|solutionrelative:realestate\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,24 +42,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "home.css",
+              "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\home.css",
+              "RelativeDocumentMoniker": "RealEstate\\wwwroot\\css\\home.css",
+              "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\home.css",
+              "RelativeToolTip": "RealEstate\\wwwroot\\css\\home.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-07-08T13:40:16.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "home.js",
+              "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\js\\home.js",
+              "RelativeDocumentMoniker": "RealEstate\\wwwroot\\js\\home.js",
+              "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\js\\home.js",
+              "RelativeToolTip": "RealEstate\\wwwroot\\js\\home.js",
+              "ViewState": "AQIAABAAAAAAAAAAAAAswBoAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-08T13:34:38.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "RealEstate\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "RealEstate\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-08T13:32:18.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Services.cshtml",
               "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Views\\Admin\\Services.cshtml",
               "RelativeDocumentMoniker": "RealEstate\\Views\\Admin\\Services.cshtml",
               "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\Views\\Admin\\Services.cshtml",
               "RelativeToolTip": "RealEstate\\Views\\Admin\\Services.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-07T13:35:03.121Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "_AdminLayout.cshtml",
               "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Views\\Shared\\_AdminLayout.cshtml",
               "RelativeDocumentMoniker": "RealEstate\\Views\\Shared\\_AdminLayout.cshtml",
@@ -121,25 +112,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Views\\Admin\\Login.cshtml",
-              "RelativeDocumentMoniker": "RealEstate\\Views\\Admin\\Login.cshtml",
-              "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\Views\\Admin\\Login.cshtml",
-              "RelativeToolTip": "RealEstate\\Views\\Admin\\Login.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-07T12:10:05.763Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "AdminController.cs",
               "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "RealEstate\\Controllers\\AdminController.cs",
               "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\Controllers\\AdminController.cs",
               "RelativeToolTip": "RealEstate\\Controllers\\AdminController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAA1wC0AAAATAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwC0AAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-07T12:08:47.877Z",
               "EditorCaption": ""
@@ -147,79 +125,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "OfferController.cs",
-              "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Controllers\\OfferController.cs",
-              "RelativeDocumentMoniker": "RealEstate\\Controllers\\OfferController.cs",
-              "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\Controllers\\OfferController.cs",
-              "RelativeToolTip": "RealEstate\\Controllers\\OfferController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T14:55:37.823Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Account.cs",
-              "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Models\\Entities\\Account.cs",
-              "RelativeDocumentMoniker": "RealEstate\\Models\\Entities\\Account.cs",
-              "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\Models\\Entities\\Account.cs",
-              "RelativeToolTip": "RealEstate\\Models\\Entities\\Account.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T14:53:58.844Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Service.cs",
-              "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Models\\Entities\\Service.cs",
-              "RelativeDocumentMoniker": "RealEstate\\Models\\Entities\\Service.cs",
-              "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\Models\\Entities\\Service.cs",
-              "RelativeToolTip": "RealEstate\\Models\\Entities\\Service.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T14:51:42.092Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MyDatabase.cs",
-              "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Models\\MyDatabase.cs",
-              "RelativeDocumentMoniker": "RealEstate\\Models\\MyDatabase.cs",
-              "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\Models\\MyDatabase.cs",
-              "RelativeToolTip": "RealEstate\\Models\\MyDatabase.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T14:51:51.576Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "about.css",
-              "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\about.css",
-              "RelativeDocumentMoniker": "RealEstate\\wwwroot\\css\\about.css",
-              "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\about.css",
-              "RelativeToolTip": "RealEstate\\wwwroot\\css\\about.css",
-              "ViewState": "AQIAADkAAAAAAAAAAIBZwE8AAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-11T11:12:34.901Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ContactsController.cs",
-              "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Controllers\\ContactsController.cs",
-              "RelativeDocumentMoniker": "RealEstate\\Controllers\\ContactsController.cs",
-              "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\Controllers\\ContactsController.cs",
-              "RelativeToolTip": "RealEstate\\Controllers\\ContactsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T11:26:56.792Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "BaseController.cs",
               "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Controllers\\BaseController.cs",
               "RelativeDocumentMoniker": "RealEstate\\Controllers\\BaseController.cs",
@@ -228,19 +133,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T10:24:10.451Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthorizeAttribute.cs",
-              "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Attributes\\AuthorizeAttribute.cs",
-              "RelativeDocumentMoniker": "RealEstate\\Attributes\\AuthorizeAttribute.cs",
-              "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\Attributes\\AuthorizeAttribute.cs",
-              "RelativeToolTip": "RealEstate\\Attributes\\AuthorizeAttribute.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T09:41:15.207Z",
               "EditorCaption": ""
             },
             {
@@ -255,90 +147,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-07-08T09:08:05.907Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "RealEstate\\Views\\_ViewImports.cshtml",
-              "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "RealEstate\\Views\\_ViewImports.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-10T10:21:56.22Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Program.cs",
-              "RelativeDocumentMoniker": "RealEstate\\Program.cs",
-              "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\Program.cs",
-              "RelativeToolTip": "RealEstate\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T10:14:16.494Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Views\\Contacts\\Index.cshtml",
-              "RelativeDocumentMoniker": "RealEstate\\Views\\Contacts\\Index.cshtml",
-              "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\Views\\Contacts\\Index.cshtml",
-              "RelativeToolTip": "RealEstate\\Views\\Contacts\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-07T12:10:08.058Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "RealEstate\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "RealEstate\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T10:21:18.855Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "OfferDto.cs",
-              "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Models\\Dto\\OfferDto.cs",
-              "RelativeDocumentMoniker": "RealEstate\\Models\\Dto\\OfferDto.cs",
-              "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\Models\\Dto\\OfferDto.cs",
-              "RelativeToolTip": "RealEstate\\Models\\Dto\\OfferDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T14:56:20.019Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Detail.cshtml",
-              "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Views\\Offer\\Detail.cshtml",
-              "RelativeDocumentMoniker": "RealEstate\\Views\\Offer\\Detail.cshtml",
-              "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\Views\\Offer\\Detail.cshtml",
-              "RelativeToolTip": "RealEstate\\Views\\Offer\\Detail.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-05T08:07:43.034Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Photo.cs",
-              "DocumentMoniker": "D:\\GitHub\\RealEstate\\RealEstate\\Models\\Entities\\Photo.cs",
-              "RelativeDocumentMoniker": "RealEstate\\Models\\Entities\\Photo.cs",
-              "ToolTip": "D:\\GitHub\\RealEstate\\RealEstate\\Models\\Entities\\Photo.cs",
-              "RelativeToolTip": "RealEstate\\Models\\Entities\\Photo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T08:55:18.935Z"
             }
           ]
         }
