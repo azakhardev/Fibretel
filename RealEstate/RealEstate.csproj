@@ -7,11 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\js\adminServices.js" />
     <Content Remove="wwwroot\js\offer.js" />
     <Content Remove="wwwroot\js\services.js" />
   </ItemGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\adminServices.js" />
     <_ContentIncludedByDefault Remove="wwwroot\js\offer.js" />
     <_ContentIncludedByDefault Remove="wwwroot\js\services.js" />
   </ItemGroup>
@@ -25,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\js\adminServices.js" />
     <None Include="wwwroot\js\offer.js" />
     <None Include="wwwroot\js\services.js" />
   </ItemGroup>

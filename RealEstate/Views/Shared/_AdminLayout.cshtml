@@ -18,10 +18,10 @@
         <header>
             <div class="col-4">
                 <div class="list-group" role="tablist">
-                    <a class="list-group-item list-group-item-action active" id="services" role="tab">Služby</a>
-                    <a class="list-group-item list-group-item-action" id="requests" role="tab">Žádosti</a>
-                    <a class="list-group-item list-group-item-action" id="account-settings" role="tab">Nastavení účtu</a>
-                    <a class="list-group-item list-group-item-action" id="accounts-management" role="tab">Správa účtu</a>
+                    <a asp-controller="Admin" asp-action="Services" class="list-group-item list-group-item-action" id="services" role="tab">Služby</a>
+                    <a asp-controller="Admin" asp-action="Requests" class="list-group-item list-group-item-action" id="requests" role="tab">Žádosti</a>
+                    <a asp-controller="Admin" asp-action="AccountSettings" class="list-group-item list-group-item-action" id="account-settings" role="tab">Nastavení účtu</a>
+                    <a asp-controller="Admin" asp-action="AccountsManagement" class="list-group-item list-group-item-action" id="accounts-management" role="tab">Správa účtu</a>
                 </div>
         </header>
         <div class="mainContainer">

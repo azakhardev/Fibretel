@@ -18,6 +18,7 @@ namespace RealEstate.Controllers
         public IActionResult Index(Request request)
         {
             myDb.Requests.Add(request);
+            myDb.Services.Where(x => x.Name == request.Name).FirstOrDefault().Requests += 1;
             myDb.SaveChanges();
             return RedirectToAction("Success");
         }

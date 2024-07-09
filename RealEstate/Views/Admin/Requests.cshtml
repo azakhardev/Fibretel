@@ -11,28 +11,30 @@
     <link rel="stylesheet" href="~/css/tables.css" />
 </head>
 
-@if (ViewBag.Services.Count > 0)
+@if (ViewBag.Requests.Count > 0)
 {
     <div class="table-wrap">
         <table class="table table-hover">
             <thead>
                 <tr>
                     <th scope="col">#</th>
+                    <th scope="col">Jméno</th>
+                    <th scope="col">Email</th>
                     <th scope="col">Služba</th>
-                    <th scope="col">Cena od</th>
                     <th scope="col">Akce</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (Service service in @ViewBag.Services)
+                @foreach (Request request in ViewBag.Requests)
                 {
                     <tr>
                         <th scope="row">@counter</th>
-                        <td>@service.Name</td>
-                        <td>@service.Price Kč</td>
+                        <td>@request.Name</td>
+                        <td>@request.Email</td>
+                        <td>@request.Service</td>
                         <td class="buttons">
-                            <a class="btn btn-primary" asp-controller="Admin" asp-action="EditService" asp-route-id="@service.Id">Upravit</a>
-                            <a class="btn btn-danger" asp-controller="Admin" asp-action="DeleteService" asp-route-id="@service.Id">Smazat</a>
+                            <a class="btn btn-primary" asp-controller="Admin" asp-action="ViewRequest" asp-route-id="@request.Id">Zobrazit</a>
+                            <a class="btn btn-danger" asp-controller="Admin" asp-action="DeleteRequest" asp-route-id="@request.Id">Smazat</a>
                         </td>
                     </tr>
                     counter++;
@@ -44,10 +46,8 @@
 else
 {
     <div class="d-flex justify-content-center align-items-center mt-2">
-        <p>Zatím nenabízíte žádné služby :(</p>
+        <p>Nejsou žádné nevyřízené žádosti.</p>
     </div>
 }
-<div class="button-add">
-    <a class="btn btn-success" asp-controller="Admin" asp-action="AddService">Přidat</a>
-</div>
-<script src="~/js/adminServices.js"></script>
+
+<script src="~/js/adminRequests.js"></script>

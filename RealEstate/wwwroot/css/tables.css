@@ -1,0 +1,33 @@
+﻿
+.buttons {
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.button-add {
+    display:flex;
+    justify-content:end;    
+    margin: 10px 20px;
+}
+
+.table-wrap {
+    max-height: 92vh;
+    overflow-y: scroll;
+}
+
+@media (min-width: 768px) {
+    table {
+        margin-block: 10px;
+        margin-inline: 15px;
+        width: 98% !important;        
+    }
+
+    .buttons {
+        flex-direction:row;
+        gap:15px;
+    }    
+}
+
+@media (min-width: 1920px) {
+}

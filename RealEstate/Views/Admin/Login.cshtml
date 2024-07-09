@@ -12,18 +12,18 @@
 <content>
     <form asp-controller="Admin" asp-action="Login">
         <div class="col-auto">
-            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+            <label class="sr-only" for="inlineFormInputGroup">Username:</label>
             <div class="input-group mb-2">
-                <input type="text" class="form-control" placeholder="Vaše jméno" asp-for="Username" required>
+                <input type="text" class="form-control" asp-for="Username" required>
                 <div class="input-group-prepend">
                     <div class="input-group-text"><box-icon name='user'></box-icon></div>
                 </div>                
             </div>
         </div>
         <div class="col-auto">
-            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+            <label class="sr-only" for="inlineFormInputGroup">Password:</label>
             <div class="input-group mb-2">
-                <input type="password" class="form-control" placeholder="Heslo" asp-for="Password" required>
+                <input type="password" class="form-control" asp-for="Password" required>
                 <div class="input-group-prepend">
                     <div class="input-group-text"><box-icon name='lock-alt'></box-icon></div>
                 </div>                

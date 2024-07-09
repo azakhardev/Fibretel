@@ -41,8 +41,8 @@
       "PackagePath": "staticwebassets\\css\\adminLayout.css"
     },
     {
-      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\adminServices.css",
-      "PackagePath": "staticwebassets\\css\\adminServices.css"
+      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\adminRequests.css",
+      "PackagePath": "staticwebassets\\css\\adminRequests.css"
     },
     {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\contancts.css",
@@ -75,6 +75,10 @@
     {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\tables.css",
+      "PackagePath": "staticwebassets\\css\\tables.css"
     },
     {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\favicon.ico",

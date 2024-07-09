@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iek6LYU9rmveEcsew3vNX8/etGYdEPn9/iGJ4ZM9ZzE=",
+  "Hash": "X2ZedkWQd5j9fq11nW/iJa/UohyIFOU4JGmrbdmLKDs=",
   "Source": "RealEstate",
   "BasePath": "_content/RealEstate",
   "Mode": "Default",
@@ -93,12 +93,12 @@
       "OriginalItemSpec": "wwwroot\\css\\adminLayout.css"
     },
     {
-      "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\adminServices.css",
+      "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\adminRequests.css",
       "SourceId": "RealEstate",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\",
       "BasePath": "_content/RealEstate",
-      "RelativePath": "css/adminServices.css",
+      "RelativePath": "css/adminRequests.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -109,7 +109,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\adminServices.css"
+      "OriginalItemSpec": "wwwroot\\css\\adminRequests.css"
     },
     {
       "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\contancts.css",
@@ -262,6 +262,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\tables.css",
+      "SourceId": "RealEstate",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\",
+      "BasePath": "_content/RealEstate",
+      "RelativePath": "css/tables.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\tables.css"
     },
     {
       "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\favicon.ico",

@@ -28,30 +28,7 @@ header div.col-4 {
 .list-group-item {
     cursor:pointer;
 }
-/*div ul {   
-    padding-inline: 5px;
-    font-size: 1.2em;
-    margin-top: 10px;
-}
 
-li {
-    display: flex;
-    justify-content: center;
-}
-
-    li a {
-        border: 0.5px solid black;
-        margin-top: 5px;
-        width:100%;
-        text-align:center;
-        text-decoration: none;
-        cursor:pointer;
-    }
-
-        li a:hover {
-            background-color: rgba(0,0,0,0.3)
-        }        
-*/
 footer {
     background-color: black;
     padding-inline: 5%;
@@ -80,26 +57,6 @@ footer {
     .mainContainer {
         flex: 3
     }
-    /*
-    div ul {
-        padding:0px;
-        border-right: 1px solid black;        
-        height:100vh;
-        margin:0;
-    }
-
-    li {        
-        justify-content: left;
-    }
-
-        li a {
-            border:none;                
-        }
-
-            li a:hover {
-                background-color: white;
-                border: 0.5px solid black;
-            }*/
 }
 
 @media (min-width: 1920px) {

@@ -17,7 +17,7 @@ namespace RealEstate.Controllers
             if (this.ViewBag.Authorized != null && this.ViewBag.Authorized != false)
             {
                 this.ViewBag.UserId = Convert.ToInt32(this.HttpContext.Session.GetString("userId"));
-                this.ViewBag.LoggedAs = myDb.Accounts.Find(this.ViewBag.UserId).Surname;
+                this.ViewBag.LoggedAs = myDb.Accounts.Find(this.ViewBag.UserId).Username;
             }
         }
     }
