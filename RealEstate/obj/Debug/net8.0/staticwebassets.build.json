@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "X2ZedkWQd5j9fq11nW/iJa/UohyIFOU4JGmrbdmLKDs=",
+  "Hash": "nPKg9/6Ot0cQIHgtgneUyW89lk+4X0kKhzPhjtDwwxs=",
   "Source": "RealEstate",
   "BasePath": "_content/RealEstate",
   "Mode": "Default",
@@ -93,25 +93,6 @@
       "OriginalItemSpec": "wwwroot\\css\\adminLayout.css"
     },
     {
-      "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\adminRequests.css",
-      "SourceId": "RealEstate",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\",
-      "BasePath": "_content/RealEstate",
-      "RelativePath": "css/adminRequests.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\adminRequests.css"
-    },
-    {
       "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\contancts.css",
       "SourceId": "RealEstate",
       "SourceType": "Discovered",
@@ -129,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\contancts.css"
+    },
+    {
+      "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\dialogs.css",
+      "SourceId": "RealEstate",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\",
+      "BasePath": "_content/RealEstate",
+      "RelativePath": "css/dialogs.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\dialogs.css"
     },
     {
       "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\home.css",

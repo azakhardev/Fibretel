@@ -1,0 +1,13 @@
+﻿dialog {
+    border-radius: 10px;
+    border: 2px solid darkgray;
+    background-color: mintcream;
+    padding:15px;
+    color: black;
+    
+}
+
+    dialog p {
+        font-size: 1.1rem;
+        font-family:Courier New, Courier, monospace, sans-serif;
+    }

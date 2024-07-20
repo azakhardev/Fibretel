@@ -6,44 +6,11 @@ using RealEstate.Models.Entities;
 
 namespace RealEstate.Controllers
 {
-
+    [Authorize]
     public class AdminController : BaseController
     {
-        MyDatabase myDb = new MyDatabase();
-        [HttpGet]
-        public IActionResult Login()
-        {
-            return View(new Account());
-        }
-
-        [HttpPost]
-        public IActionResult Login(Account account)
-        {
-            List<Account> accounts = myDb.Accounts.ToList();
-
-            foreach (Account acc in accounts)
-            {
-                if (acc.Username == account.Username)
-                {
-                    if (BCrypt.Net.BCrypt.Verify(account.Password, acc.Password))
-                    {
-                        this.HttpContext.Session.SetString("userId", acc.Id.ToString());
-                        return RedirectToAction("Services");
-                    }
-                }
-            }
-            account.Password = "";
-            return View(account);
-        }
-
-        [HttpGet]
-        public IActionResult Logout()
-        {
-            this.HttpContext.Session.Remove("userId");
-            return RedirectToAction("Login");
-        }
-
-        [Authorize]
+        MyDatabase myDb = new MyDatabase();        
+        
         [HttpGet]
         public IActionResult Services()
         {
@@ -51,8 +18,7 @@ namespace RealEstate.Controllers
 
             return View();
         }
-
-        [Authorize]
+        
         [HttpGet]
         public IActionResult EditService(int id)
         {
@@ -67,17 +33,18 @@ namespace RealEstate.Controllers
 
             return View(service);
         }
-
-        [Authorize]
+        
         [HttpPost]
         public IActionResult EditService(Service service)
         {
             if (service.Id != null)
             {
                 Service updatedService = this.myDb.Services.Find(service.Id);
-                updatedService.Name = service.Name;
+                updatedService.Name = service.Name;                
+                updatedService.SmallDescription = service.SmallDescription;
                 updatedService.Description = service.Description;
-                updatedService.Photo = service.Photo;                
+                updatedService.Price = service.Price;
+                updatedService.Photo = service.Photo;                                
             }
             else 
             {
@@ -88,8 +55,7 @@ namespace RealEstate.Controllers
 
             return RedirectToAction("Services");
         }
-
-        [Authorize]
+        
         [HttpGet]
         public IActionResult DeleteService(int id)
         {
@@ -98,8 +64,7 @@ namespace RealEstate.Controllers
 
             return RedirectToAction("Services");
         }
-
-        [Authorize]
+        
         [HttpGet]
         public IActionResult Requests()
         {
@@ -107,8 +72,7 @@ namespace RealEstate.Controllers
 
             return View();
         }
-
-        [Authorize]
+        
         [HttpGet]
         public IActionResult ViewRequest(int id)
         {
@@ -116,8 +80,7 @@ namespace RealEstate.Controllers
 
             return View(request);
         }
-
-        [Authorize]
+        
         [HttpGet]
         public IActionResult DeleteRequest(int id)
         {
@@ -127,7 +90,6 @@ namespace RealEstate.Controllers
             return View();
         }
 
-        [Authorize]
         [HttpGet]
         public IActionResult AccountSettings()
         {
@@ -136,13 +98,35 @@ namespace RealEstate.Controllers
             return View(acc);
         }
 
-        [Authorize]
         [HttpGet]
         public IActionResult AccountsManagement()
         {
             int id = this.ViewBag.UserId;
             ViewBag.Accounts = myDb.Accounts.Where(x => x.Id != id).ToList();
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult Logs() 
+        {
+            List<Log> logs = myDb.Logs.ToList();
+            logs.Reverse();
+            ViewBag.Logs = logs;
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult ClearLogs() 
+        {
+            myDb.Logs.RemoveRange(myDb.Logs.Where(x => true));
+            myDb.SaveChanges();
+            return RedirectToAction("Logs");
+        }
+
+        private void AddLog(Log log) 
+        {
+            myDb.Logs.Add(log);
+            myDb.SaveChanges();
         }
     }
 }

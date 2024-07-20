@@ -1,0 +1,69 @@
+﻿@using RealEstate.Models;
+@using RealEstate.Models.Entities;
+
+@{
+    ViewData["Title"] = "Administrace";
+    Layout = "_AdminLayout";
+    int counter = 0;
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/tables.css" />
+    <link rel="stylesheet" href="~/css/dialogs.css" />
+</head>
+
+@if (ViewBag.Logs.Count > 0)
+{
+    <div class="table-wrap">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Uživatel</th>
+                    <th scope="col">Typ akce</th>
+                    <th scope="col">Čas</th>
+                    <th scope="col">Zobrazit zprávu</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Log log in ViewBag.Logs)
+                {
+                    <tr>
+                        <th scope="row">@counter</th>
+                        <td>@log.Username</td>
+                        <td>@log.Type</td>
+                        <td>@log.Time</td>
+                        @* <td>@log.Message</td> *@
+                        <td class="buttons">
+                            <button class="btn btn-primary" onclick="showMessage('@log.Message')"> Zobrazit</button>                            
+                        </td>
+                    </tr>
+                    counter++;
+                }
+            </tbody>
+        </table>        
+    </div>
+    <div class="button-add">
+        <a class="btn btn-danger" style="float:right" asp-controller="Admin" asp-action="ClearLogs">Smazat všechny logy</a>
+    </div>    
+}
+else
+{
+    <div class="d-flex justify-content-center align-items-center mt-2">
+        <p>Nebyly zaznamenány žádné logy.</p>
+    </div>
+}
+
+<dialog>
+    <p></p>
+</dialog>
+
+<script>
+    document.querySelector('#logs').classList.add('active');
+    function showMessage(val) 
+    {
+        const dialog = document.querySelector("dialog");
+        dialog.querySelector('p').innerText = val;
+        dialog.showModal();
+    }
+</script>

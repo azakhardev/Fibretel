@@ -18,7 +18,7 @@ namespace RealEstate.Attributes
                 string c = controller.Request.RouteValues["controller"].ToString();
                 string a = controller.Request.RouteValues["action"].ToString();
 
-                context.Result = new RedirectToActionResult("Login", "Admin", new { c, a });
+                context.Result = new RedirectToActionResult("Login", "Login", new { c, a });
             }
         }
     }

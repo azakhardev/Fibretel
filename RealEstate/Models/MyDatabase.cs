@@ -6,13 +6,15 @@ namespace RealEstate.Models
 {
     public class MyDatabase : DbContext
     {
-        public DbSet<Account> Accounts { get; set; }     
+        public DbSet<Account> Accounts { get; set; }
 
         public DbSet<Service> Services { get; set; }
 
         public DbSet<Photo> Photos { get; set; }
 
         public DbSet<Entities.Request> Requests { get; set; }
+
+        public DbSet<Log> Logs { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

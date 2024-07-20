@@ -10,7 +10,7 @@
     int counter = 0;
 }
 
-<content>   
+<content>
     <div class="services">
         @foreach (Service service in ViewBag.Services)
         {
@@ -29,6 +29,9 @@
                             {
                                 <h6>@count+ zájemců</h6>
                             }
+                            <div>
+                                <p>@service.SmallDescription</p>
+                            </div>
                             <a asp-controller="Offer" asp-action="Detail" asp-route-id="@service.Id" class="btn btn-primary" style="float:right">Podrobnosti</a>
                         </div>
                     </div>
