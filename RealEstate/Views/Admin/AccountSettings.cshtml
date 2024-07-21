@@ -1,0 +1,51 @@
+﻿@using RealEstate.Models;
+@using RealEstate.Models.Entities;
+
+@{
+    ViewData["Title"] = "Váš účet";
+    Layout = "_AdminLayout";
+}
+@model Account
+
+<head>    
+    <link rel="stylesheet" href="~/css/forms.css" />
+</head>
+
+<div class="form-wrap">
+    <form asp-controller="Admin" asp-action="AccountSettings">
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group pb-2">
+            <label>Jméno účtu:</label>
+            <input type="text" asp-for="Username" class="form-control" />
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+        <div class="form-group pb-2">
+            <label>Jméno:</label>
+            <input asp-for="Name" class="form-control" />
+            <input type="hidden" asp-for="Password" class="form-control" />
+        </div>
+        <div class="form-group pb-2">
+            <label>Titul:</label>
+            <input type="text" asp-for="Degree" class="form-control" />
+            <span asp-validation-for="Degree" class="text-danger"></span>
+        </div>
+        <div class="form-group pb-2">
+            <label>Příjmení:</label>
+            <input type="text" asp-for="Surname" class="form-control" />
+            <span asp-validation-for="Surname" class="text-danger"></span>
+        </div>
+        <div class="form-group pb-2">
+            <label>Email:</label>
+            <input type="email" asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="buttons pb-2">
+            <a class="btn btn-primary" asp-controller="Admin" asp-action="PasswordChange">Změnit heslo</a>
+            <button type="submit" class="btn btn-success">Uložit</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.querySelector('#account-settings').classList.add('active');
+</script>

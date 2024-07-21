@@ -16,9 +16,9 @@ namespace RealEstate.Attributes
             if (controller.HttpContext.Session.GetString("userId") == null)
             {
                 string c = controller.Request.RouteValues["controller"].ToString();
-                string a = controller.Request.RouteValues["action"].ToString();
+                string a = controller.Request.RouteValues["action"].ToString();                
 
-                context.Result = new RedirectToActionResult("Login", "Login", new { c, a });
+                context.Result = new RedirectToActionResult("Index", "Login", new { c, a });
             }
         }
     }

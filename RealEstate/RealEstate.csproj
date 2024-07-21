@@ -7,33 +7,30 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\js\adminServices.js" />
     <Content Remove="wwwroot\js\offer.js" />
     <Content Remove="wwwroot\js\services.js" />
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="wwwroot\js\adminServices.js" />
     <_ContentIncludedByDefault Remove="wwwroot\js\offer.js" />
     <_ContentIncludedByDefault Remove="wwwroot\js\services.js" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Components\" />
-    <Folder Include="Models\Dto\" />
     <Folder Include="Views\Shared\Components\" />
     <Folder Include="wwwroot\Images\Main\" />
     <Folder Include="wwwroot\Images\Services\" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\js\adminServices.js" />
     <None Include="wwwroot\js\offer.js" />
     <None Include="wwwroot\js\services.js" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.3" />
     <PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.5" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>

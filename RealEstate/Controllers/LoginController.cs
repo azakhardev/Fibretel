@@ -9,13 +9,13 @@ namespace RealEstate.Controllers
         MyDatabase myDb = new MyDatabase();
 
         [HttpGet]
-        public IActionResult Login()
+        public IActionResult Index()
         {
             return View(new Account());
         }
 
         [HttpPost]
-        public IActionResult Login(Account account)
+        public IActionResult Index(Account account)
         {
             List<Account> accounts = myDb.Accounts.ToList();
 
@@ -23,14 +23,19 @@ namespace RealEstate.Controllers
             {
                 if (acc.Username == account.Username)
                 {
+                    if (acc.Disabled == true)                     
+                    {
+                        ViewBag.Disabled = acc.Disabled;
+                        break;
+                    }
                     if (BCrypt.Net.BCrypt.Verify(account.Password, acc.Password))
                     {
-                        this.HttpContext.Session.SetString("userId", acc.Id.ToString());
-                        return RedirectToAction("Services","Admin");
+                        this.HttpContext.Session.SetString("userId", acc.Id.ToString());                        
+                        return RedirectToAction("Services","Admin");                        
                     }
                 }
             }
-            account.Password = "";
+            account.Password = "";            
             return View(account);
         }
 
@@ -38,7 +43,8 @@ namespace RealEstate.Controllers
         public IActionResult Logout()
         {
             this.HttpContext.Session.Remove("userId");
-            return RedirectToAction("Login");
+            this.HttpContext.Session.Remove("superior");
+            return RedirectToAction("Index");
         }
     }
 }

@@ -1,0 +1,44 @@
+﻿@using RealEstate.Models;
+@using RealEstate.Models.Entities;
+<head>
+    <link rel="stylesheet" href="~/css/login.css" />
+</head>
+
+@{
+    ViewData["Title"] = "Přihlášení";
+}
+
+@model Account
+<content>
+    <form asp-controller="Login" asp-action="Index">
+        <div class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Username:</label>
+            <div class="input-group mb-2">
+                <input type="text" class="form-control" asp-for="Username" required>
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><box-icon name='user'></box-icon></div>
+                </div>                
+            </div>
+        </div>
+        <div class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Password:</label>
+            <div class="input-group mb-2">
+                <input type="password" class="form-control" asp-for="Password" required>
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><box-icon name='lock-alt'></box-icon></div>
+                </div>                
+            </div>
+        </div>
+
+        <button type="submit" class="mt-2 btn btn-success" style="float:right">Přihlásit se</button>
+    </form>
+</content>
+
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script>    
+    var disabled = '@ViewBag.Disabled'
+    if (disabled) 
+    {        
+        alert('Účet je zablokován');
+    }
+</script>

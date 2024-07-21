@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - RealEstate</title>
+    <title>@ViewData["Title"] - Logo</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RealEstate.styles.css" asp-append-version="true" />
@@ -21,10 +21,10 @@
                     <a asp-controller="Admin" asp-action="Services" class="list-group-item list-group-item-action" id="services" role="tab">Služby</a>
                     <a asp-controller="Admin" asp-action="Requests" class="list-group-item list-group-item-action" id="requests" role="tab">Žádosti</a>
                     <a asp-controller="Admin" asp-action="AccountSettings" class="list-group-item list-group-item-action" id="account-settings" role="tab">Nastavení účtu</a>
-                    @if (ViewBag.Superior)
+                    @if (ViewBag.Superior != null)
                     {
-                        <a asp-controller="Admin" asp-action="AccountsManagement" class="list-group-item list-group-item-action" id="accounts-management" role="tab">Správa účtů</a>
-                        <a asp-controller="Admin" asp-action="Logs" class="list-group-item list-group-item-action" id="logs" role="tab">Logy</a>
+                        <a asp-controller="SuperiorAdmin" asp-action="AccountsManagement" class="list-group-item list-group-item-action" id="accounts-management" role="tab">Správa účtů</a>
+                        <a asp-controller="SuperiorAdmin" asp-action="Logs" class="list-group-item list-group-item-action" id="logs" role="tab">Logy</a>
                     }
                 </div>
             </div>

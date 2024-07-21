@@ -1,0 +1,57 @@
+﻿@using RealEstate.Models;
+@using RealEstate.Models.Entities;
+
+@{
+    ViewData["Title"] = "Správá účtů";
+    Layout = "_AdminLayout";
+    int counter = 1;
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/tables.css" />
+</head>
+
+
+@if (ViewBag.Accounts.Count > 0)
+{
+    <div class="table-wrap">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Jméno</th>
+                    <th scope="col">Příjmení</th>
+                    <th scope="col">Akce</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Account account in ViewBag.Accounts)
+                {
+                    <tr>
+                        <th scope="row">@counter</th>
+                        <td>@account.Username</td>
+                        <td>@account.Email</td>
+                        <td>@account.Name</td>
+                        <td>@account.Surname</td>
+                        <td>
+                            <a class="btn btn-danger" asp-controller="Admin" asp-action="DeleteAccount" asp-route-id="@account.Id">Smazat</a>
+                        </td>
+                    </tr>
+                    counter++;
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="d-flex justify-content-center align-items-center mt-2">
+        <p>Zatím jste jediný zaměstnanec :(</p>
+    </div>
+}
+
+<div class="button-add">
+    <a class="btn btn-success" asp-controller="Admin" asp-action="AddAccount">Přidat</a>
+</div>

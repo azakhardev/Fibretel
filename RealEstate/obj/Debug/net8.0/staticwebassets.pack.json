@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\css\\dialogs.css"
     },
     {
+      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\forms.css",
+      "PackagePath": "staticwebassets\\css\\forms.css"
+    },
+    {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\home.css",
       "PackagePath": "staticwebassets\\css\\home.css"
     },
