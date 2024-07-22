@@ -32,11 +32,27 @@
                     <tr>
                         <th scope="row">@counter</th>
                         <td>@account.Username</td>
-                        <td>@account.Email</td>
+                        <td><a href="mailto:@account.Email">@account.Email</a></td>
                         <td>@account.Name</td>
                         <td>@account.Surname</td>
-                        <td>
-                            <a class="btn btn-danger" asp-controller="Admin" asp-action="DeleteAccount" asp-route-id="@account.Id">Smazat</a>
+                        <td class="buttons">
+                            @if (account.Superior)
+                            {
+                                <a class="btn btn-primary" asp-controller="SuperiorAdmin" asp-action="ChangeRole" asp-route-id="@account.Id">Ponížit</a>
+                            }
+                            else
+                            {
+                                <a class="btn btn-primary" asp-controller="SuperiorAdmin" asp-action="ChangeRole" asp-route-id="@account.Id">Povýšit</a>
+                            }
+                            @if (account.Disabled)
+                            {
+                                <a class="btn btn-primary" asp-controller="SuperiorAdmin" asp-action="ChangeAvilability" asp-route-id="@account.Id">Aktivovat</a>
+                            }
+                            else
+                            {
+                                <a class="btn btn-primary" asp-controller="SuperiorAdmin" asp-action="ChangeAvilability" asp-route-id="@account.Id">Deaktivovat</a>
+                            }
+                            <a class="btn btn-danger" asp-controller="SuperiorAdmin" asp-action="DeleteAccount" asp-route-id="@account.Id">Smazat</a>
                         </td>
                     </tr>
                     counter++;
@@ -53,5 +69,8 @@ else
 }
 
 <div class="button-add">
-    <a class="btn btn-success" asp-controller="Admin" asp-action="AddAccount">Přidat</a>
+    <a class="btn btn-success" asp-controller="SuperiorAdmin" asp-action="CreateAccount">Přidat uživatele</a>
 </div>
+<script>
+    document.querySelector('#accounts-management').classList.add('active');
+</script>

@@ -12,9 +12,11 @@
 }
 
 .table-wrap {
-    max-height: 92vh;
+    max-height: 60vh;
     overflow-y: scroll;
 }
+
+
 
 @media (min-width: 768px) {
     table {
@@ -26,7 +28,10 @@
     .buttons {
         flex-direction:row;
         gap:15px;
-    }    
+    }
+    .table-wrap {
+        max-height: 92vh;     
+    }
 }
 
 @media (min-width: 1920px) {

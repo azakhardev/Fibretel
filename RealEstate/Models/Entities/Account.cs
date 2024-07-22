@@ -10,6 +10,7 @@ namespace RealEstate.Models.Entities
         public int Id { get; set; }
         
         [Length(4,256, ErrorMessage = "Username musí být 4-256 znaků dlouhý")]
+        [Required(ErrorMessage = "Username nesmí být prázdný")]
         public string Username { get; set; }
 
         public string Password { get; set; }

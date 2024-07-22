@@ -4,7 +4,7 @@
 @{
     ViewData["Title"] = "Logy";
     Layout = "_AdminLayout";
-    int counter = 0;
+    int counter = 1;
 }
 
 <head>
@@ -34,7 +34,7 @@
                         <td>@log.Type</td>
                         <td>@log.Time</td>
                         @* <td>@log.Message</td> *@
-                        <td class="buttons">
+                        <td>
                             <button class="btn btn-primary" onclick="showMessage('@log.Message')"> Zobrazit</button>                            
                         </td>
                     </tr>
@@ -44,7 +44,7 @@
         </table>        
     </div>
     <div class="button-add">
-        <a class="btn btn-danger" style="float:right" asp-controller="Admin" asp-action="ClearLogs">Smazat všechny logy</a>
+        <a class="btn btn-danger" style="float:right" asp-controller="SuperiorAdmin" asp-action="ClearLogs">Smazat všechny logy</a>
     </div>    
 }
 else

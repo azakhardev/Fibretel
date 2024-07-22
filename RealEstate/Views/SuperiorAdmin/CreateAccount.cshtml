@@ -1,0 +1,69 @@
+﻿@using RealEstate.Models;
+@using RealEstate.Models.Dto;
+@using RealEstate.Models.Entities;
+
+@{
+    ViewData["Title"] = "Vytvoření účtu";
+    Layout = "_AdminLayout";
+}
+@model CreateAccountDto
+
+<head>
+    <link rel="stylesheet" href="~/css/forms.css" />
+    <link rel="stylesheet" href="~/css/tables.css" />
+</head>
+
+<div class="form-wrap">
+    <form asp-controller="SuperiorAdmin" asp-action="CreateAccount">
+        <div class="form-group mb-2">
+            <label>Uživatelské jméno:</label>
+            <input type="text" asp-for="Account.Username" class="form-control" />
+            <span asp-validation-for="Account.Username" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-2">
+            <label>Heslo:</label>
+            <input type="password" asp-for="Account.Password" class="form-control" />
+            <span asp-validation-for="Account.Password" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-2">
+            <label>Kontrola hesla:</label>
+            <input type="password" asp-for="Password2" class="form-control" />
+            <span asp-validation-for="Password2" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-2 d-flex flex-row justify-content-between">
+            <div class="d-flex flex-row gap-2">
+                <label>Nadřazený administrátor:</label>
+                <input type="checkbox" asp-for="Account.Superior" class="form-check" />
+                <span asp-validation-for="Account.Superior" class="text-danger"></span>
+            </div>
+            <div class="d-flex flex-row gap-2" >
+                <label>Neaktivní:</label>
+                <input type="checkbox" asp-for="Account.Disabled" class="form-check" />
+                <span asp-validation-for="Account.Disabled" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group mb-2">
+            <label>Jméno:</label>
+            <input type="text" asp-for="Account.Name" class="form-control" />
+            <span asp-validation-for="Account.Name" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-2">
+            <label>Titul:</label>
+            <input type="text" asp-for="Account.Degree" class="form-control" />
+            <span asp-validation-for="Account.Degree" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-2">
+            <label>Příjmení:</label>
+            <input type="text" asp-for="Account.Surname" class="form-control" />
+            <span asp-validation-for="Account.Surname" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-2">
+            <label>Email:</label>
+            <input type="email" asp-for="Account.Email" class="form-control" />
+            <span asp-validation-for="Account.Email" class="text-danger"></span>
+        </div>
+        <div class="button-add">
+            <button class="btn btn-success">Vytvořit</button>
+        </div>
+    </form>
+</div>
