@@ -1,0 +1,43 @@
+﻿dialog h2 {
+    text-align: center;
+}
+
+dialog h3 {
+    color: gray;
+}
+
+dialog p {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.answered {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color: green;
+    min-width:95px;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: end;
+}
+
+@media (min-width: 768px) {
+    dialog {
+        max-width: 70%;
+    }
+
+        dialog p {
+            margin-top: 0;
+        }
+}
+
+@media (min-width: 1680px) {
+    dialog {
+        max-width: 50%;
+    }
+}

@@ -1,14 +1,17 @@
 ﻿@using RealEstate.Models;
 @using RealEstate.Models.Entities;
+@using RealEstate.Models.Dto;
 
 @{
     ViewData["Title"] = "Administrace";
     Layout = "_AdminLayout";
     int counter = 1;
 }
-
+@model Answer
 <head>
     <link rel="stylesheet" href="~/css/tables.css" />
+    <link rel="stylesheet" href="~/css/dialogs.css" />
+    <link rel="stylesheet" href="~/css/adminRequests.css" />
 </head>
 
 @if (ViewBag.Requests.Count > 0)
@@ -20,6 +23,7 @@
                     <th scope="col">#</th>
                     <th scope="col">Jméno</th>
                     <th scope="col">Email</th>
+                    <th scope="col">Čas</th>
                     <th scope="col">Služba</th>
                     <th scope="col">Akce</th>
                 </tr>
@@ -30,10 +34,21 @@
                     <tr>
                         <th scope="row">@counter</th>
                         <td>@request.Name</td>
-                        <td>@request.Email</td>
+                        <td><a href="mailto:@request.Email">@request.Email</a></td>
+                        <td>@request.SentAt</td>
                         <td>@request.Service</td>
                         <td class="buttons">
-                            <a class="btn btn-primary" asp-controller="Admin" asp-action="ViewRequest" asp-route-id="@request.Id">Zobrazit</a>
+                            @if (request.Answered)
+                            {
+                                <div class="buttons">
+                                    <div class="answered">&#10003 Odpovězeno</div>
+                                    <a class="btn btn-primary" onclick="showRequest('@request.Text')">Zobrazit</a>
+                                </div>
+                            }
+                            else
+                            {
+                                <a class="btn btn-primary" onclick="answerRequest('@request.Id','@request.Name','@request.Service', '@request.Text', '@request.Email')">Zobrazit</a>
+                            }
                             <a class="btn btn-danger" asp-controller="Admin" asp-action="DeleteRequest" asp-route-id="@request.Id">Smazat</a>
                         </td>
                     </tr>
@@ -42,6 +57,28 @@
             </tbody>
         </table>
     </div>
+
+    <dialog id="answerRequest">
+        <h2></h2>
+        <h3></h3>
+        <p></p>
+
+        <hr />
+
+        <form asp-controller="Admin" asp-action="AnswerRequest">
+            <input type="hidden" id="requestId" asp-for="RequestId" />
+            <input type="hidden" id="subject" asp-for="Subject" />
+            <input type="hidden" id="mail" asp-for="CustomerEmail" />
+            <div class="form-group">
+                <textarea asp-for="Text" class="form-control" rows="3" required></textarea>
+                <button type="submit" class="btn btn-success">Odpovědět</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="showRequest">
+        <p></p>
+    </dialog>
 }
 else
 {
@@ -52,4 +89,22 @@ else
 
 <script>
     document.querySelector('#requests').classList.add('active');
+    const answerDialog = document.querySelector('#answerRequest');
+    const showDialog = document.querySelector('#showRequest');
+
+    function answerRequest(id, user, service, message, email) {
+
+        answerDialog.querySelector('h2').innerText = service;
+        answerDialog.querySelector('h3').innerText = user;
+        answerDialog.querySelector('p').innerText = message;
+        answerDialog.querySelector('#requestId').value = id;
+        answerDialog.querySelector('#mail').value = email;
+        answerDialog.querySelector('#subject').value = service;
+        answerDialog.showModal();
+    }
+
+    function showRequest(message) {
+        showDialog.querySelector('p').innerText = message;
+        showDialog.showModal();
+    }
 </script>

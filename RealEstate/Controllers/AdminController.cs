@@ -1,9 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Net.Mail;
 using Org.BouncyCastle.Crypto.Generators;
 using RealEstate.Attributes;
 using RealEstate.Models;
 using RealEstate.Models.Dto;
 using RealEstate.Models.Entities;
+using System.Net;
+
 
 namespace RealEstate.Controllers
 {
@@ -69,26 +72,47 @@ namespace RealEstate.Controllers
         [HttpGet]
         public IActionResult Requests()
         {
-            ViewBag.Requests = myDb.Requests.ToList();
+            List<Request> requests = myDb.Requests.Where(x => x.Answered == false).ToList();
+            requests.AddRange(myDb.Requests.Where(x => x.Answered).ToList());
+            ViewBag.Requests = requests;
 
             return View();
         }
 
-        [HttpGet]
-        public IActionResult ViewRequest(int id)
+        [HttpPost]
+        public IActionResult AnswerRequest(Answer answer) 
         {
-            Request request = myDb.Requests.Find(id);
+            try
+            {
+                SendEmail(answer.CustomerEmail, $"Logo - {answer.Subject}", answer.Text);
+            }
+            catch (Exception ex)
+            {
+                return RedirectToAction("Fail", new { message = "Nastal problém s emailovou službou SMTP. Zákazníkovi zatím musíte odpovědět přes svůj email. Prosím, obraťte se na správce webu. " });   
+            }
 
-            return View(request);
+            myDb.Requests.Find(answer.RequestId).Answered = true;
+
+            Log log = Logger.CreateLog(ViewBag.LoggedAs, "Správa poptávek", $"Odpovězeno na poptávku zákazníka {answer.CustomerEmail} zprávou {answer.Text}");
+            myDb.Logs.Add(log);
+
+            myDb.SaveChanges();    
+
+            return RedirectToAction("Success", new { message = "Odpověď na poptávku byla odeslána" }); ;
         }
 
         [HttpGet]
         public IActionResult DeleteRequest(int id)
         {
-            this.myDb.Requests.Remove(this.myDb.Requests.Find(id));
+            Request request = this.myDb.Requests.Find(id);
+            this.myDb.Requests.Remove(request);
+
+            Log log = Logger.CreateLog(ViewBag.LoggedAs, "Správa poptávek", $"Byla odstraněna poptávka od zákazníka {request.Email} na službu {request.Service}");
+            this.myDb.Logs.Add(log);
+
             this.myDb.SaveChanges();
 
-            return View();
+            return RedirectToAction("Requests");
         }
 
         [HttpGet]
@@ -114,9 +138,9 @@ namespace RealEstate.Controllers
             updatedAccount.Surname = account.Surname;
             updatedAccount.Email = account.Email;
 
-            myDb.SaveChanges();
+            this.myDb.SaveChanges();
 
-            return RedirectToAction("Success");
+            return RedirectToAction("Success", new { message = "Změny účtu byly úspěšně uloženy" });
         }
 
         [HttpGet]
@@ -137,14 +161,14 @@ namespace RealEstate.Controllers
                 {
                     acc.Password = BCrypt.Net.BCrypt.HashPassword(pswd.NewPassword1);
                     myDb.SaveChanges();
-                    return RedirectToAction("Success");
+                    return RedirectToAction("Success", new { message = "Změna hesla proběhla úspěšně" });
                 }
-                else 
+                else
                 {
                     ModelState.AddModelError("NewPassword1", "Nová hesla se neshodují");
                 }
             }
-            else 
+            else
             {
                 ModelState.AddModelError("OldPassword", "Staré heslo je neplatné");
             }
@@ -154,15 +178,35 @@ namespace RealEstate.Controllers
         }
 
         [HttpGet]
-        public IActionResult Success()
+        public IActionResult Success(string message)
         {
+            this.ViewBag.Message = message; 
             return View();
         }
 
-        private void AddLog(Log log)
+        [HttpGet]
+        public IActionResult Fail(string message)
         {
-            myDb.Logs.Add(log);
-            myDb.SaveChanges();
+            this.ViewBag.Message = message;
+            return View();
+        }
+
+        private void SendEmail(string toEmail, string subject, string body) 
+        {
+            string fromEmail = "ahoj@domain.com"; //Setup account
+            string fromPassword = ""; //Setup password
+
+            MailMessage mail = new MailMessage();
+            mail.From = new MailAddress(fromEmail);
+            mail.To.Add(toEmail);
+            mail.Subject = subject;
+            mail.Body = body;
+            
+            SmtpClient smtpClient = new SmtpClient("localhost", 25);
+            smtpClient.Credentials = new NetworkCredential(fromEmail, fromPassword);
+            smtpClient.EnableSsl = false; // Enable on launch
+
+            smtpClient.Send(mail);
         }
     }
 }

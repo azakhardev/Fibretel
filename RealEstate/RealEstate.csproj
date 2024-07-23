@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\adminRequests.css" />
     <_ContentIncludedByDefault Remove="wwwroot\js\offer.js" />
     <_ContentIncludedByDefault Remove="wwwroot\js\services.js" />
   </ItemGroup>

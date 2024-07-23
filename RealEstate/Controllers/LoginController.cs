@@ -30,7 +30,13 @@ namespace RealEstate.Controllers
                     }
                     if (BCrypt.Net.BCrypt.Verify(account.Password, acc.Password))
                     {
-                        this.HttpContext.Session.SetString("userId", acc.Id.ToString());                        
+                        this.HttpContext.Session.SetString("userId", acc.Id.ToString());
+
+                        Log log = Logger.CreateLog(acc.Username, "Vstup do systému", "Uživatel se přihlásil do systému");
+
+                        myDb.Logs.Add(log);
+                        myDb.SaveChanges();
+
                         return RedirectToAction("Services","Admin");                        
                     }
                 }
@@ -44,6 +50,12 @@ namespace RealEstate.Controllers
         {
             this.HttpContext.Session.Remove("userId");
             this.HttpContext.Session.Remove("superior");
+
+            Log log = Logger.CreateLog(ViewBag.LoggedAs, "Opuštění systému", "Uživatel se odhlásil ze systému");
+            myDb.Logs.Add(log);
+
+            myDb.SaveChanges();
+
             return RedirectToAction("Index");
         }
     }

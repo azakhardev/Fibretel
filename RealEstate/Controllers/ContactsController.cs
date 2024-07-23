@@ -17,13 +17,18 @@ namespace RealEstate.Controllers
         [HttpPost]
         public IActionResult Index(Request request)
         {
+            request.SentAt = DateTime.Now;
+            request.Answered = false;
             myDb.Requests.Add(request);
-            myDb.Services.Where(x => x.Name == request.Name).FirstOrDefault().Requests += 1;
+
+            if (request.Service != "Jiné")
+                myDb.Services.Where(x => x.Name == request.Service).FirstOrDefault().Requests += 1;
+
             myDb.SaveChanges();
             return RedirectToAction("Success");
         }
         [HttpGet]
-        public IActionResult Success() 
+        public IActionResult Success()
         {
             return View();
         }

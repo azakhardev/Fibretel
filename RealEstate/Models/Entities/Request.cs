@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace RealEstate.Models.Entities
 {
@@ -10,5 +11,7 @@ namespace RealEstate.Models.Entities
         public string Email { get; set; }
         public string Text { get; set; }
         public string Service { get; set; }   
+        public DateTime SentAt { get; set; }
+        public bool Answered { get; set; }
     }
 }

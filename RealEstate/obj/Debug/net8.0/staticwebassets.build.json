@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NbOP08Y5+3NabLjL2XFV0FIQ480LeblWWKUbtxuZZtc=",
+  "Hash": "5cGC/DU8fKdqh5DsEQtNXYrLf7J+B4yYnQQ04YTVhoA=",
   "Source": "RealEstate",
   "BasePath": "_content/RealEstate",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\adminLayout.css"
+    },
+    {
+      "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\adminRequests.css",
+      "SourceId": "RealEstate",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\",
+      "BasePath": "_content/RealEstate",
+      "RelativePath": "css/adminRequests.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\adminRequests.css"
     },
     {
       "Identity": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\contancts.css",

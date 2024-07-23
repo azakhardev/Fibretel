@@ -47,7 +47,7 @@ namespace RealEstate.Controllers
 
             myDb.SaveChanges();
 
-            return RedirectToAction("Success");
+            return RedirectToAction("Success", new { message = "Účet byl úspěšně vytvořen" });
         }
 
 
@@ -124,8 +124,9 @@ namespace RealEstate.Controllers
         }
 
         [HttpGet]
-        public IActionResult Success()
+        public IActionResult Success(string message)
         {
+            this.ViewBag.Message = message;
             return View();
         }
     }

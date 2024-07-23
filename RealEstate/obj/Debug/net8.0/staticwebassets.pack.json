@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\css\\adminLayout.css"
     },
     {
+      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\adminRequests.css",
+      "PackagePath": "staticwebassets\\css\\adminRequests.css"
+    },
+    {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\contancts.css",
       "PackagePath": "staticwebassets\\css\\contancts.css"
     },
