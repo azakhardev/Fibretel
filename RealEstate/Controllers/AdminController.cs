@@ -18,7 +18,7 @@ namespace RealEstate.Controllers
         [HttpGet]
         public IActionResult Services()
         {
-            ViewBag.Services = myDb.Services.ToList();
+            this.ViewBag.Services = myDb.Services.ToList();
 
             return View();
         }
@@ -26,12 +26,13 @@ namespace RealEstate.Controllers
         [HttpGet]
         public IActionResult EditService(int id)
         {
-            Service service = new Service();
+            ServiceDto service = new ServiceDto();
             this.ViewBag.Action = "Add";
 
             if (id != 0)
             {
-                service = myDb.Services.Find(id);
+                service.Service = myDb.Services.Find(id);
+                service.Photos = myDb.Photos.Where(x => x.ServiceId == id).ToList();  
                 this.ViewBag.Action = "Edit";
             }
 
@@ -39,23 +40,36 @@ namespace RealEstate.Controllers
         }
 
         [HttpPost]
-        public IActionResult EditService(Service service)
+        public IActionResult EditService(ServiceDto serviceDto)
         {
-            if (service.Id != null)
-            {
-                Service updatedService = this.myDb.Services.Find(service.Id);
+            if(!this.ModelState.IsValid)
+                return View(serviceDto);
+
+            Log log = new Log();
+            Service service = serviceDto.Service;
+
+            Service updatedService = myDb.Services.Find(service.Id);
+            if (updatedService != null)
+            {                
                 updatedService.Name = service.Name;
                 updatedService.SmallDescription = service.SmallDescription;
                 updatedService.Description = service.Description;
                 updatedService.Price = service.Price;
                 updatedService.Photo = service.Photo;
+                log = Logger.CreateLog(this.ViewBag.LoggedAs, "Správa služeb", $"Byla změněna služba {service.Name}");
             }
             else
             {
-                this.myDb.Services.Add(service);
+                myDb.Services.Add(service);
+                log = Logger.CreateLog(this.ViewBag.LoggedAs, "Správa služeb", $"Byla vytvořena služba {service.Name}");
             }
 
-            this.myDb.SaveChanges();
+            myDb.Logs.Add(log);
+
+            if(serviceDto.Photos.Any())
+                SavePhotos(serviceDto.Photos);
+
+            myDb.SaveChanges();
 
             return RedirectToAction("Services");
         }
@@ -63,8 +77,14 @@ namespace RealEstate.Controllers
         [HttpGet]
         public IActionResult DeleteService(int id)
         {
-            this.myDb.Services.Remove(this.myDb.Services.Find(id));
-            this.myDb.SaveChanges();
+            Service service = this.myDb.Services.Find(id);
+
+            myDb.Services.Remove(service);
+
+            Log log = Logger.CreateLog(this.ViewBag.LoggedAs, "Správa služeb", $"Byla odstraněna služba {service.Name}");
+            myDb.Logs.Add(log);
+
+            myDb.SaveChanges();
 
             return RedirectToAction("Services");
         }
@@ -74,29 +94,29 @@ namespace RealEstate.Controllers
         {
             List<Request> requests = myDb.Requests.Where(x => x.Answered == false).ToList();
             requests.AddRange(myDb.Requests.Where(x => x.Answered).ToList());
-            ViewBag.Requests = requests;
+            this.ViewBag.Requests = requests;
 
             return View();
         }
 
         [HttpPost]
-        public IActionResult AnswerRequest(Answer answer) 
+        public IActionResult AnswerRequest(Answer answer)
         {
             try
             {
-                SendEmail(answer.CustomerEmail, $"Logo - {answer.Subject}", answer.Text);
+                SendEmail(answer.CustomerEmail, $"Fibretel - {answer.Subject}", answer.Text);
             }
             catch (Exception ex)
             {
-                return RedirectToAction("Fail", new { message = "Nastal problém s emailovou službou SMTP. Zákazníkovi zatím musíte odpovědět přes svůj email. Prosím, obraťte se na správce webu. " });   
+                return RedirectToAction("Fail", new { message = "Nastal problém s emailovou službou SMTP. Zákazníkovi zatím musíte odpovědět přes svůj email. Prosím, obraťte se na správce webu. " });
             }
 
             myDb.Requests.Find(answer.RequestId).Answered = true;
 
-            Log log = Logger.CreateLog(ViewBag.LoggedAs, "Správa poptávek", $"Odpovězeno na poptávku zákazníka {answer.CustomerEmail} zprávou {answer.Text}");
+            Log log = Logger.CreateLog(this.ViewBag.LoggedAs, "Správa poptávek", $"Odpovězeno na poptávku zákazníka {answer.CustomerEmail} zprávou {answer.Text}");
             myDb.Logs.Add(log);
 
-            myDb.SaveChanges();    
+            myDb.SaveChanges();
 
             return RedirectToAction("Success", new { message = "Odpověď na poptávku byla odeslána" }); ;
         }
@@ -104,13 +124,13 @@ namespace RealEstate.Controllers
         [HttpGet]
         public IActionResult DeleteRequest(int id)
         {
-            Request request = this.myDb.Requests.Find(id);
-            this.myDb.Requests.Remove(request);
+            Request request = myDb.Requests.Find(id);
+            myDb.Requests.Remove(request);
 
-            Log log = Logger.CreateLog(ViewBag.LoggedAs, "Správa poptávek", $"Byla odstraněna poptávka od zákazníka {request.Email} na službu {request.Service}");
-            this.myDb.Logs.Add(log);
+            Log log = Logger.CreateLog(this.ViewBag.LoggedAs, "Správa poptávek", $"Byla odstraněna poptávka od zákazníka {request.Email} na službu {request.Service}");
+            myDb.Logs.Add(log);
 
-            this.myDb.SaveChanges();
+            myDb.SaveChanges();
 
             return RedirectToAction("Requests");
         }
@@ -138,7 +158,7 @@ namespace RealEstate.Controllers
             updatedAccount.Surname = account.Surname;
             updatedAccount.Email = account.Email;
 
-            this.myDb.SaveChanges();
+            myDb.SaveChanges();
 
             return RedirectToAction("Success", new { message = "Změny účtu byly úspěšně uloženy" });
         }
@@ -180,7 +200,7 @@ namespace RealEstate.Controllers
         [HttpGet]
         public IActionResult Success(string message)
         {
-            this.ViewBag.Message = message; 
+            this.ViewBag.Message = message;
             return View();
         }
 
@@ -191,9 +211,29 @@ namespace RealEstate.Controllers
             return View();
         }
 
-        private void SendEmail(string toEmail, string subject, string body) 
+        private void SavePhotos(List<Photo> photos)
         {
-            string fromEmail = "ahoj@domain.com"; //Setup account
+            foreach (Photo photo in photos)
+            {
+                if (!myDb.Photos.Contains(photo))
+                {
+                    myDb.Photos.Add(photo);
+                }
+                else
+                {
+                    Photo editedPhoto = myDb.Photos.Find(photo.Id);
+                    if (editedPhoto.Path != photo.Path)
+                        editedPhoto.Path = photo.Path;
+                    if (editedPhoto.Text != photo.Text)
+                        editedPhoto.Text = photo.Text;
+                }                
+            }
+            myDb.SaveChanges();
+        }
+
+        private void SendEmail(string toEmail, string subject, string body)
+        {
+            string fromEmail = "customerinfo@fibretel.com"; //Setup account
             string fromPassword = ""; //Setup password
 
             MailMessage mail = new MailMessage();
@@ -201,7 +241,7 @@ namespace RealEstate.Controllers
             mail.To.Add(toEmail);
             mail.Subject = subject;
             mail.Body = body;
-            
+
             SmtpClient smtpClient = new SmtpClient("localhost", 25);
             smtpClient.Credentials = new NetworkCredential(fromEmail, fromPassword);
             smtpClient.EnableSsl = false; // Enable on launch

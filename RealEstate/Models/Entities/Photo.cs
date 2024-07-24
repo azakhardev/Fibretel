@@ -10,5 +10,7 @@ namespace RealEstate.Models.Entities
         public int ServiceId { get; set; }
 
         public string Path { get; set; }
+
+        public string Text { get; set; }
     }
 }

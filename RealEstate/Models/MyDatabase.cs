@@ -18,7 +18,7 @@ namespace RealEstate.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("server=localhost;database=realestate;user=root;password=;SslMode=none");
+            optionsBuilder.UseMySQL("server=localhost;database=fibretel;user=root;password=;SslMode=none");
         }
     }
 }

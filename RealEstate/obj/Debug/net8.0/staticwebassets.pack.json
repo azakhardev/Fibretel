@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\RealEstate.bundle.scp.css"
     },
     {
+      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\Images\\Gallery\\CatGlasses.png",
+      "PackagePath": "staticwebassets\\Images\\Gallery\\CatGlasses.png"
+    },
+    {
+      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\Images\\Gallery\\Woman.png",
+      "PackagePath": "staticwebassets\\Images\\Gallery\\Woman.png"
+    },
+    {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\Images\\Main\\dog.jpg",
       "PackagePath": "staticwebassets\\Images\\Main\\dog.jpg"
     },
@@ -43,6 +51,10 @@
     {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\adminRequests.css",
       "PackagePath": "staticwebassets\\css\\adminRequests.css"
+    },
+    {
+      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\adminService.css",
+      "PackagePath": "staticwebassets\\css\\adminService.css"
     },
     {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\css\\contancts.css",
@@ -95,6 +107,10 @@
     {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\js\\about.js",
       "PackagePath": "staticwebassets\\js\\about.js"
+    },
+    {
+      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\js\\adminService.js",
+      "PackagePath": "staticwebassets\\js\\adminService.js"
     },
     {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\js\\contacts.js",
