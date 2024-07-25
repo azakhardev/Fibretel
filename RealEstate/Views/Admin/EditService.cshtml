@@ -2,20 +2,18 @@
 @using Fibretel.Models.Dto;
 @using Fibretel.Models.Entities;
 
-
 @{
     ViewData["Title"] = "Správa služby";
     Layout = "_AdminLayout";
 }
 @model ServiceDto
 
-
 <head>
-    <link rel="stylesheet" href="~/css/adminService.css"/>
+    <link rel="stylesheet" href="~/css/adminService.css" />
 </head>
 
 <div class="form-wrap">
-    <form asp-controller="Admin" asp-action="EditService">
+    <form enctype="multipart/form-data" asp-controller="Admin" asp-action="EditService">
         <input type="hidden" asp-for="Service.Id" />
         <input type="hidden" asp-for="Service.Requests" />
 
@@ -38,35 +36,164 @@
             <label>Minimální cena:</label>
             <input type="number" min="0" step="1" asp-for="Service.Price" class="form-control" />
             <span asp-validation-for="Service.Price" class="text-danger"></span>
-        </div>        
+        </div>
         <div class="form-group mb-2">
             <label>Titulní obrázek:</label>
             <input type="file" asp-for="Service.Photo" class="form-control" />
             <span asp-validation-for="Service.Photo" class="text-danger"></span>
         </div>
 
+        <h3>Obrázky a jejich popisky v přehledu služby</h3>
+
         <div class="form-photos-wrapper">
             @for (int i = 0; i < Model.Photos.Count; i++)
             {
+                <hr />
                 <div class="form-group">
-                    <input type="hidden" asp-for="@Model.Photos[i].Id" />
-                    <input type="hidden" asp-for="@Model.Photos[i].ServiceId" />
-                    <label>Cesta:</label>
-                    <input type="text" asp-for="@Model.Photos[i].Path" class="form-control" />
-                    <label>Text:</label>
-                    <input type="text" asp-for="@Model.Photos[i].Text" class="form-control" />
+                    <div class="image-wrap vcenter">
+                        <img src="~/@Model.Photos[i].Path" />
+                    </div>
+                    <div>
+                        <input type="hidden" asp-for="@Model.Photos[i].Id" />
+                        <input type="hidden" asp-for="@Model.Photos[i].ServiceId" />
+                    </div>
+                    <div class="fileSelect vcenter">
+                        <div>
+                            <label>Soubor:</label>
+                            <input type="file" asp-for="@Model.Photos[i].Path" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="textInput vcenter">
+                        <div style="width:100%">
+                            <label>Text:</label>
+                            <textarea rows="3" asp-for="@Model.Photos[i].Text" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="button-wrap vcenter">
+                        <a class="btn btn-danger" asp-controller="Admin" asp-action="DeletePhoto" asp-route-id="@Model.Photos[i].Id" asp-route-serviceId="@Model.Service.Id"> Odebrat</a>
+                    </div>
                 </div>
             }
         </div>
-
-        @if (ViewBag.Action == "Add")
-        {
-            <button class="btn btn-success">Přidat</button>
-        }
-        else
-        {
-            <button class="btn btn-success">Uložit</button>
-        }
+        <div>
+            <button type="button" id="addPhoto">Přidat novou fotografii</button>
+        </div>
+        <div>
+            @if (ViewBag.Action == "Add")
+            {
+                <button class="btn btn-success mt-2">Přidat</button>
+            }
+            else
+            {
+                <button class="btn btn-success mt-2">Uložit</button>
+            }
+        </div>
     </form>
 </div>
-<script src="~/js/adminService.js"></script>
+<script>
+    document.querySelector('#services').classList.add('active');
+    let photosCount = @Model.Photos.Count - 1;
+    const addPhotoButton = document.querySelector('#addPhoto');
+
+    addPhotoButton.addEventListener('click', c => {
+        c.preventDefault();
+        photosCount++;
+
+        const hr = document.createElement('hr');
+
+        const wrapper = document.createElement('div');
+        wrapper.classList.add('form-group');
+
+        const photoWrap = document.createElement('div');
+        photoWrap.classList.add('image-wrap');
+        const image = document.createElement('img');
+        photoWrap.appendChild(image);
+
+        const inputId = document.createElement('input');
+        inputId.type = 'hidden';
+        inputId.name = `Photos[${photosCount}].Id`;
+
+        const inputServiceId = document.createElement('input');
+        inputServiceId.type = 'hidden';
+        inputServiceId.name = `Photos[${photosCount}].ServiceId`;
+        inputServiceId.value = @Model.Service.Id;
+
+        const divHidden = document.createElement('div');
+        divHidden.appendChild(inputId);
+        divHidden.appendChild(inputServiceId);
+
+        const fileDiv = document.createElement('div');
+        fileDiv.classList.add('fileSelect');
+        fileDiv.classList.add('vcenter');
+
+        const labelPath = document.createElement('label');
+        labelPath.innerText = "Soubor:"
+
+        const inputPath = document.createElement('input');
+        inputPath.type = 'file';
+        inputPath.classList.add('form-control');
+        inputPath.name = `Photos[${photosCount}].Path`;
+
+        const div1 = document.createElement('div');
+
+        div1.appendChild(labelPath);
+        div1.appendChild(inputPath);
+        fileDiv.appendChild(div1);
+
+        inputPath.addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    image.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        const textDiv = document.createElement('div');
+        textDiv.classList.add('textInput');
+        textDiv.classList.add('vcenter');
+
+        const labelText = document.createElement('label');
+        labelText.innerText = 'Text:';
+
+        const inputText = document.createElement('textarea');
+        inputText.name = `Photos[${photosCount}].Text`;
+        inputText.classList.add('form-control');
+        inputText.rows = 3;
+
+        const div2 = document.createElement('div');
+        div2.style.width = "100%";
+        div2.appendChild(labelText);
+        div2.appendChild(inputText);
+
+        textDiv.appendChild(div2)
+
+        const buttonDiv = document.createElement('div');
+        buttonDiv.classList.add('button-wrap');
+        buttonDiv.classList.add('vcenter');
+
+        const buttonDelete = document.createElement('button');
+        buttonDelete.type = 'button';
+        buttonDelete.classList.add('btn');
+        buttonDelete.classList.add('btn-danger');
+        buttonDelete.innerText = 'Odebrat';        
+
+        buttonDelete.addEventListener('click', c => {
+            hr.remove();
+            wrapper.remove();
+        });
+
+        buttonDiv.appendChild(buttonDelete);
+
+        wrapper.appendChild(photoWrap);
+        wrapper.appendChild(divHidden);
+        wrapper.appendChild(fileDiv);
+        wrapper.appendChild(textDiv);
+        wrapper.appendChild(buttonDiv);
+
+        document.querySelector('.form-photos-wrapper').appendChild(hr);
+        document.querySelector('.form-photos-wrapper').appendChild(wrapper);
+    })
+</script>

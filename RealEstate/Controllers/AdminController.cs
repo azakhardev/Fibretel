@@ -6,6 +6,7 @@ using System.Net;
 using Fibretel.Models.Dto;
 using Fibretel.Models;
 using Fibretel.Models.Entities;
+using Microsoft.AspNetCore.Hosting;
 
 
 namespace Fibretel.Controllers
@@ -14,6 +15,13 @@ namespace Fibretel.Controllers
     public class AdminController : BaseController
     {
         MyDatabase myDb = new MyDatabase();
+
+        private readonly IWebHostEnvironment _webHostEnvironment;
+
+        public AdminController(IWebHostEnvironment webHostEnvironment)
+        {
+            _webHostEnvironment = webHostEnvironment;
+        }
 
         [HttpGet]
         public IActionResult Services()
@@ -55,12 +63,23 @@ namespace Fibretel.Controllers
                 updatedService.SmallDescription = service.SmallDescription;
                 updatedService.Description = service.Description;
                 updatedService.Price = service.Price;
-                updatedService.Photo = service.Photo;
+
+                if (updatedService.Photo != service.Photo)
+                {
+                    //TODO: Upload new photo and delete old
+
+                    updatedService.Photo = service.Photo;
+                }
+
                 log = Logger.CreateLog(ViewBag.LoggedAs, "Správa služeb", $"Byla změněna služba {service.Name}");
             }
             else
             {
                 myDb.Services.Add(service);
+
+                //TODO: Upload photo to the web
+                
+
                 log = Logger.CreateLog(ViewBag.LoggedAs, "Správa služeb", $"Byla vytvořena služba {service.Name}");
             }
 
@@ -72,6 +91,14 @@ namespace Fibretel.Controllers
             myDb.SaveChanges();
 
             return RedirectToAction("Services");
+        }
+
+        public IActionResult DeletePhoto(int id, int serviceId)
+        {
+            myDb.Photos.Remove(myDb.Photos.Find(id));
+            myDb.SaveChanges();
+
+            return RedirectToAction("EditService", new { id = serviceId });
         }
 
         [HttpGet]
@@ -217,18 +244,32 @@ namespace Fibretel.Controllers
             {
                 if (!myDb.Photos.Contains(photo))
                 {
+                    //TODO: Upload new photo
+
                     myDb.Photos.Add(photo);
                 }
                 else
                 {
                     Photo editedPhoto = myDb.Photos.Find(photo.Id);
                     if (editedPhoto.Path != photo.Path)
+                    {
+                        FileInfo file = new FileInfo(@$"~/{editedPhoto.Path}");
+                        file.Delete();
+
+                        //TODO: Upload new photo
+
                         editedPhoto.Path = photo.Path;
+                    }
                     if (editedPhoto.Text != photo.Text)
                         editedPhoto.Text = photo.Text;
                 }
             }
             myDb.SaveChanges();
+        }
+
+        private void UploadImage(string path) 
+        {
+            string serverFolder = _webHostEnvironment.WebRootPath + path;
         }
 
         private void SendEmail(string toEmail, string subject, string body)

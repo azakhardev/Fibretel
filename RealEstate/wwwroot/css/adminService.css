@@ -1,2 +1,77 @@
-﻿body {
+﻿form {
+    margin-inline: 2%;
+}
+
+h3 {
+    text-align: center;
+}
+
+.form-photos-wrapper .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 5px;
+}
+
+.form-group img {
+    width: 100%;
+}
+
+
+@media (min-width: 768px) {
+    form {
+        margin: 2%;
+    }
+
+    .vcenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-photos-wrapper .form-group {
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .form-photos-wrapper .form-group {
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .fileSelect {
+        flex:2;
+    }
+
+    .textInput {
+        flex:5;
+    }
+
+    .button-wrap {
+        flex:1;     
+    }
+
+    .form-group img {
+        width: 30vw;
+    }
+}
+
+@media (min-width: 1680px) {
+    .form-photos-wrapper {
+        width: 86%;
+        margin-inline: 7%;
+    }
+
+    .form-group img {
+        width: 25vw;
+    }
+}
+
+@media (min-width: 1920px) {
+    .form-group img {
+        width: 20vw;
+    }
 }
