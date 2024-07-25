@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RealEstate.bundle.scp.css",
-      "PackagePath": "staticwebassets\\RealEstate.bundle.scp.css"
+      "Id": "D:\\GitHub\\RealEstate\\RealEstate\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Fibretel.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Fibretel.bundle.scp.css"
     },
     {
       "Id": "D:\\GitHub\\RealEstate\\RealEstate\\wwwroot\\Images\\Gallery\\CatGlasses.png",
@@ -353,20 +353,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.RealEstate.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Fibretel.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.RealEstate.props",
-      "PackagePath": "build\\RealEstate.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Fibretel.props",
+      "PackagePath": "build\\Fibretel.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.RealEstate.props",
-      "PackagePath": "buildMultiTargeting\\RealEstate.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Fibretel.props",
+      "PackagePath": "buildMultiTargeting\\Fibretel.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.RealEstate.props",
-      "PackagePath": "buildTransitive\\RealEstate.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Fibretel.props",
+      "PackagePath": "buildTransitive\\Fibretel.props"
     }
   ],
   "ElementsToRemove": []

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eidnFk4gjK4=",
+  "dgSpecHash": "HhY3NPaWVKg=",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\RealEstate\\RealEstate\\RealEstate.csproj",
+  "projectFilePath": "D:\\GitHub\\Fibratel\\RealEstate\\Fibretel.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\artem\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\artem\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",

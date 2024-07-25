@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Fibretel.Models;
+using Fibretel.Models.Dto;
+using Fibretel.Models.Entities;
+using Microsoft.AspNetCore.Mvc;
 using Org.BouncyCastle.Crypto.Digests;
-using RealEstate.Attributes;
-using RealEstate.Models;
-using RealEstate.Models.Dto;
-using RealEstate.Models.Entities;
+using Fibretel.Attributes;
 
-namespace RealEstate.Controllers
+namespace Fibretel.Controllers
 {
     [SuperiorAuthorize]
     public class SuperiorAdminController : BaseController
@@ -15,7 +15,7 @@ namespace RealEstate.Controllers
         [HttpGet]
         public IActionResult AccountsManagement()
         {
-            int id = this.ViewBag.UserId;
+            int id = ViewBag.UserId;
             ViewBag.Accounts = myDb.Accounts.Where(x => x.Id != id).ToList();
             return View();
         }
@@ -32,7 +32,7 @@ namespace RealEstate.Controllers
         {
             if (acc.Password2 != acc.Account.Password)
             {
-                this.ModelState.AddModelError("Password2", "Hesla se neshodují");
+                ModelState.AddModelError("Password2", "Hesla se neshodují");
                 return View(acc);
             }
 
@@ -54,7 +54,7 @@ namespace RealEstate.Controllers
         [HttpGet]
         public IActionResult ChangeRole(int id)
         {
-            Account acc = myDb.Accounts.Find(id);            
+            Account acc = myDb.Accounts.Find(id);
             Log log = new Log();
 
             if (acc.Superior)
@@ -117,7 +117,7 @@ namespace RealEstate.Controllers
 
             Log log = Logger.CreateLog(ViewBag.LoggedAs, "Správa logů", "Byly odstraněny všechny logy");
             log.Id = 1;
-            myDb.Logs.Add(log);            
+            myDb.Logs.Add(log);
 
             myDb.SaveChanges();
             return RedirectToAction("Logs");
@@ -126,7 +126,7 @@ namespace RealEstate.Controllers
         [HttpGet]
         public IActionResult Success(string message)
         {
-            this.ViewBag.Message = message;
+            ViewBag.Message = message;
             return View();
         }
     }

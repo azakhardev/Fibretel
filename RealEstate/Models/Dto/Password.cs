@@ -1,4 +1,4 @@
-﻿namespace RealEstate.Models.Dto
+﻿namespace Fibretel.Models.Dto
 {
     public class NewPassword
     {

@@ -7309,11 +7309,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\RealEstate\\RealEstate\\RealEstate.csproj",
-      "projectName": "RealEstate",
-      "projectPath": "D:\\GitHub\\RealEstate\\RealEstate\\RealEstate.csproj",
+      "projectUniqueName": "D:\\GitHub\\Fibratel\\RealEstate\\Fibretel.csproj",
+      "projectName": "Fibretel",
+      "projectPath": "D:\\GitHub\\Fibratel\\RealEstate\\Fibretel.csproj",
       "packagesPath": "C:\\Users\\artem\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\RealEstate\\RealEstate\\obj\\",
+      "outputPath": "D:\\GitHub\\Fibratel\\RealEstate\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

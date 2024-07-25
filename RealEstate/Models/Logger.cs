@@ -1,10 +1,10 @@
-﻿using RealEstate.Models.Entities;
+﻿using Fibretel.Models.Entities;
 
-namespace RealEstate.Models
+namespace Fibretel.Models
 {
     public static class Logger
     {
-        public static Log CreateLog(string usr, string type, string message) 
+        public static Log CreateLog(string usr, string type, string message)
         {
             Log log = new Log();
             log.Time = DateTime.Now;

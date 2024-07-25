@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace RealEstate.Models.Entities
+namespace Fibretel.Models.Entities
 {
     [Table("Requests")]
     public class Request
@@ -10,7 +10,7 @@ namespace RealEstate.Models.Entities
         public string? Name { get; set; }
         public string Email { get; set; }
         public string Text { get; set; }
-        public string Service { get; set; }   
+        public string Service { get; set; }
         public DateTime SentAt { get; set; }
         public bool Answered { get; set; }
     }

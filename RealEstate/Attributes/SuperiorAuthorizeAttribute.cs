@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
 
-namespace RealEstate.Attributes
+namespace Fibretel.Attributes
 {
     public class SuperiorAuthorizeAttribute : Attribute, IActionFilter
     {

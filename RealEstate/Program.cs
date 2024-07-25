@@ -1,4 +1,4 @@
-namespace RealEstate
+namespace Fibretel
 {
     public class Program
     {

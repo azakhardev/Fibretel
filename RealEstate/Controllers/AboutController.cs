@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace RealEstate.Controllers
+namespace Fibretel.Controllers
 {
     public class AboutController : BaseController
     {

@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using RealEstate.Models;
-using RealEstate.Models.Entities;
+﻿using Fibretel.Models;
+using Fibretel.Models.Entities;
+using Microsoft.AspNetCore.Mvc;
 
-namespace RealEstate.Controllers
+namespace Fibretel.Controllers
 {
     public class ContactsController : Controller
     {

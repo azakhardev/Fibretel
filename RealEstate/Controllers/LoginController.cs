@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using RealEstate.Models;
-using RealEstate.Models.Entities;
+﻿using Fibretel.Models;
+using Fibretel.Models.Entities;
+using Microsoft.AspNetCore.Mvc;
 
-namespace RealEstate.Controllers
+namespace Fibretel.Controllers
 {
     public class LoginController : BaseController
     {
@@ -23,33 +23,33 @@ namespace RealEstate.Controllers
             {
                 if (acc.Username == account.Username)
                 {
-                    if (acc.Disabled == true)                     
+                    if (acc.Disabled == true)
                     {
                         ViewBag.Disabled = acc.Disabled;
                         break;
                     }
                     if (BCrypt.Net.BCrypt.Verify(account.Password, acc.Password))
                     {
-                        this.HttpContext.Session.SetString("userId", acc.Id.ToString());
+                        HttpContext.Session.SetString("userId", acc.Id.ToString());
 
                         Log log = Logger.CreateLog(acc.Username, "Vstup do systému", "Uživatel se přihlásil do systému");
 
                         myDb.Logs.Add(log);
                         myDb.SaveChanges();
 
-                        return RedirectToAction("Services","Admin");                        
+                        return RedirectToAction("Services", "Admin");
                     }
                 }
             }
-            account.Password = "";            
+            account.Password = "";
             return View(account);
         }
 
         [HttpGet]
         public IActionResult Logout()
         {
-            this.HttpContext.Session.Remove("userId");
-            this.HttpContext.Session.Remove("superior");
+            HttpContext.Session.Remove("userId");
+            HttpContext.Session.Remove("superior");
 
             Log log = Logger.CreateLog(ViewBag.LoggedAs, "Opuštění systému", "Uživatel se odhlásil ze systému");
             myDb.Logs.Add(log);

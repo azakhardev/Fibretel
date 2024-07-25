@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RealEstate.Models.Entities
+namespace Fibretel.Models.Entities
 {
     [Table("Logs")]
     public class Log

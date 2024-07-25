@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
-namespace RealEstate.Models.Dto
+namespace Fibretel.Models.Dto
 {
     public class Answer
     {

@@ -2,14 +2,14 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RealEstate.Models.Entities
+namespace Fibretel.Models.Entities
 {
     [Table("Accounts")]
     public class Account
     {
         public int Id { get; set; }
-        
-        [Length(4,256, ErrorMessage = "Username musí být 4-256 znaků dlouhý")]
+
+        [Length(4, 256, ErrorMessage = "Username musí být 4-256 znaků dlouhý")]
         [Required(ErrorMessage = "Username nesmí být prázdný")]
         public string Username { get; set; }
 

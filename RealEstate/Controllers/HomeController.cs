@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using RealEstate.Models;
+using Fibretel.Models;
 using System.Diagnostics;
 
-namespace RealEstate.Controllers
+namespace Fibretel.Controllers
 {
     public class HomeController : BaseController
     {

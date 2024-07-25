@@ -6,7 +6,7 @@
     <title>@ViewData["Title"] - Fibretel</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/RealEstate.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/@(nameof(Fibretel)).styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/adminLayout.css" asp-append-version="true" />
 </head>
 <body>
@@ -30,7 +30,7 @@
             </div>
         </header>
         <div class="mainContainer">
-            <main role="main" @* class="pb-3" *@>
+            <main role="main">
                 @RenderBody()
             </main>
         </div>

@@ -1,8 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Fibretel.Models.Entities;
+using Microsoft.EntityFrameworkCore;
 using Org.BouncyCastle.Asn1.Ocsp;
-using RealEstate.Models.Entities;
 
-namespace RealEstate.Models
+namespace Fibretel.Models
 {
     public class MyDatabase : DbContext
     {

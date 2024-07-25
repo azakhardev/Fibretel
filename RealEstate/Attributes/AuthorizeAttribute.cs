@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
 
-namespace RealEstate.Attributes
+namespace Fibretel.Attributes
 {
     public class AuthorizeAttribute : Attribute, IActionFilter
     {
@@ -16,7 +16,7 @@ namespace RealEstate.Attributes
             if (controller.HttpContext.Session.GetString("userId") == null)
             {
                 string c = controller.Request.RouteValues["controller"].ToString();
-                string a = controller.Request.RouteValues["action"].ToString();                
+                string a = controller.Request.RouteValues["action"].ToString();
 
                 context.Result = new RedirectToActionResult("Index", "Login", new { c, a });
             }

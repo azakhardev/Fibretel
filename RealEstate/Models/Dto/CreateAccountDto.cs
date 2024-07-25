@@ -1,6 +1,6 @@
-﻿using RealEstate.Models.Entities;
+﻿using Fibretel.Models.Entities;
 
-namespace RealEstate.Models.Dto
+namespace Fibretel.Models.Dto
 {
     public class CreateAccountDto
     {

@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Fibretel.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using RealEstate.Models;
 
-namespace RealEstate.Controllers
+namespace Fibretel.Controllers
 {
     public class BaseController : Controller
     {
@@ -12,17 +12,17 @@ namespace RealEstate.Controllers
         {
             base.OnActionExecuting(context);
 
-            this.ViewBag.Authorized = this.HttpContext.Session.GetString("userId") != null;
+            ViewBag.Authorized = HttpContext.Session.GetString("userId") != null;
 
-            if (this.ViewBag.Authorized != null && this.ViewBag.Authorized != false)
+            if (ViewBag.Authorized != null && ViewBag.Authorized != false)
             {
-                this.ViewBag.UserId = Convert.ToInt32(this.HttpContext.Session.GetString("userId"));
-                this.ViewBag.LoggedAs = myDb.Accounts.Find(this.ViewBag.UserId).Username;
+                ViewBag.UserId = Convert.ToInt32(HttpContext.Session.GetString("userId"));
+                ViewBag.LoggedAs = myDb.Accounts.Find(ViewBag.UserId).Username;
 
-                if (myDb.Accounts.Find(this.ViewBag.UserId).Superior == true)
+                if (myDb.Accounts.Find(ViewBag.UserId).Superior == true)
                 {
-                    this.HttpContext.Session.SetString("superior", "true");
-                    this.ViewBag.Superior = true;
+                    HttpContext.Session.SetString("superior", "true");
+                    ViewBag.Superior = true;
                 }
             }
         }

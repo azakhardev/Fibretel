@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Net.Mail;
 using Org.BouncyCastle.Crypto.Generators;
-using RealEstate.Attributes;
-using RealEstate.Models;
-using RealEstate.Models.Dto;
-using RealEstate.Models.Entities;
+using Fibretel.Attributes;
 using System.Net;
+using Fibretel.Models.Dto;
+using Fibretel.Models;
+using Fibretel.Models.Entities;
 
 
-namespace RealEstate.Controllers
+namespace Fibretel.Controllers
 {
     [Authorize]
     public class AdminController : BaseController
@@ -18,7 +18,7 @@ namespace RealEstate.Controllers
         [HttpGet]
         public IActionResult Services()
         {
-            this.ViewBag.Services = myDb.Services.ToList();
+            ViewBag.Services = myDb.Services.ToList();
 
             return View();
         }
@@ -27,13 +27,13 @@ namespace RealEstate.Controllers
         public IActionResult EditService(int id)
         {
             ServiceDto service = new ServiceDto();
-            this.ViewBag.Action = "Add";
+            ViewBag.Action = "Add";
 
             if (id != 0)
             {
                 service.Service = myDb.Services.Find(id);
-                service.Photos = myDb.Photos.Where(x => x.ServiceId == id).ToList();  
-                this.ViewBag.Action = "Edit";
+                service.Photos = myDb.Photos.Where(x => x.ServiceId == id).ToList();
+                ViewBag.Action = "Edit";
             }
 
             return View(service);
@@ -42,7 +42,7 @@ namespace RealEstate.Controllers
         [HttpPost]
         public IActionResult EditService(ServiceDto serviceDto)
         {
-            if(!this.ModelState.IsValid)
+            if (!ModelState.IsValid)
                 return View(serviceDto);
 
             Log log = new Log();
@@ -50,23 +50,23 @@ namespace RealEstate.Controllers
 
             Service updatedService = myDb.Services.Find(service.Id);
             if (updatedService != null)
-            {                
+            {
                 updatedService.Name = service.Name;
                 updatedService.SmallDescription = service.SmallDescription;
                 updatedService.Description = service.Description;
                 updatedService.Price = service.Price;
                 updatedService.Photo = service.Photo;
-                log = Logger.CreateLog(this.ViewBag.LoggedAs, "Správa služeb", $"Byla změněna služba {service.Name}");
+                log = Logger.CreateLog(ViewBag.LoggedAs, "Správa služeb", $"Byla změněna služba {service.Name}");
             }
             else
             {
                 myDb.Services.Add(service);
-                log = Logger.CreateLog(this.ViewBag.LoggedAs, "Správa služeb", $"Byla vytvořena služba {service.Name}");
+                log = Logger.CreateLog(ViewBag.LoggedAs, "Správa služeb", $"Byla vytvořena služba {service.Name}");
             }
 
             myDb.Logs.Add(log);
 
-            if(serviceDto.Photos.Any())
+            if (serviceDto.Photos.Any())
                 SavePhotos(serviceDto.Photos);
 
             myDb.SaveChanges();
@@ -77,11 +77,11 @@ namespace RealEstate.Controllers
         [HttpGet]
         public IActionResult DeleteService(int id)
         {
-            Service service = this.myDb.Services.Find(id);
+            Service service = myDb.Services.Find(id);
 
             myDb.Services.Remove(service);
 
-            Log log = Logger.CreateLog(this.ViewBag.LoggedAs, "Správa služeb", $"Byla odstraněna služba {service.Name}");
+            Log log = Logger.CreateLog(ViewBag.LoggedAs, "Správa služeb", $"Byla odstraněna služba {service.Name}");
             myDb.Logs.Add(log);
 
             myDb.SaveChanges();
@@ -94,7 +94,7 @@ namespace RealEstate.Controllers
         {
             List<Request> requests = myDb.Requests.Where(x => x.Answered == false).ToList();
             requests.AddRange(myDb.Requests.Where(x => x.Answered).ToList());
-            this.ViewBag.Requests = requests;
+            ViewBag.Requests = requests;
 
             return View();
         }
@@ -113,7 +113,7 @@ namespace RealEstate.Controllers
 
             myDb.Requests.Find(answer.RequestId).Answered = true;
 
-            Log log = Logger.CreateLog(this.ViewBag.LoggedAs, "Správa poptávek", $"Odpovězeno na poptávku zákazníka {answer.CustomerEmail} zprávou {answer.Text}");
+            Log log = Logger.CreateLog(ViewBag.LoggedAs, "Správa poptávek", $"Odpovězeno na poptávku zákazníka {answer.CustomerEmail} zprávou {answer.Text}");
             myDb.Logs.Add(log);
 
             myDb.SaveChanges();
@@ -127,7 +127,7 @@ namespace RealEstate.Controllers
             Request request = myDb.Requests.Find(id);
             myDb.Requests.Remove(request);
 
-            Log log = Logger.CreateLog(this.ViewBag.LoggedAs, "Správa poptávek", $"Byla odstraněna poptávka od zákazníka {request.Email} na službu {request.Service}");
+            Log log = Logger.CreateLog(ViewBag.LoggedAs, "Správa poptávek", $"Byla odstraněna poptávka od zákazníka {request.Email} na službu {request.Service}");
             myDb.Logs.Add(log);
 
             myDb.SaveChanges();
@@ -138,7 +138,7 @@ namespace RealEstate.Controllers
         [HttpGet]
         public IActionResult AccountSettings()
         {
-            int id = this.ViewBag.UserId;
+            int id = ViewBag.UserId;
             Account acc = myDb.Accounts.Find(id);
             ViewBag.Action = "Update";
             return View(acc);
@@ -147,9 +147,9 @@ namespace RealEstate.Controllers
         [HttpPost]
         public IActionResult AccountSettings(Account account)
         {
-            Account updatedAccount = this.myDb.Accounts.Find(account.Id);
+            Account updatedAccount = myDb.Accounts.Find(account.Id);
 
-            if (!this.ModelState.IsValid)
+            if (!ModelState.IsValid)
                 return View(account);
 
             updatedAccount.Username = account.Username;
@@ -173,7 +173,7 @@ namespace RealEstate.Controllers
         [HttpPost]
         public IActionResult PasswordChange(NewPassword pswd)
         {
-            int id = this.ViewBag.UserId;
+            int id = ViewBag.UserId;
             Account acc = myDb.Accounts.Find(id);
             if (BCrypt.Net.BCrypt.Verify(pswd.OldPassword, acc.Password))
             {
@@ -200,14 +200,14 @@ namespace RealEstate.Controllers
         [HttpGet]
         public IActionResult Success(string message)
         {
-            this.ViewBag.Message = message;
+            ViewBag.Message = message;
             return View();
         }
 
         [HttpGet]
         public IActionResult Fail(string message)
         {
-            this.ViewBag.Message = message;
+            ViewBag.Message = message;
             return View();
         }
 
@@ -226,7 +226,7 @@ namespace RealEstate.Controllers
                         editedPhoto.Path = photo.Path;
                     if (editedPhoto.Text != photo.Text)
                         editedPhoto.Text = photo.Text;
-                }                
+                }
             }
             myDb.SaveChanges();
         }

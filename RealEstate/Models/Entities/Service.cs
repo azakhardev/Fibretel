@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Net;
 
-namespace RealEstate.Models.Entities
+namespace Fibretel.Models.Entities
 {
     [Table("Services")]
     public class Service

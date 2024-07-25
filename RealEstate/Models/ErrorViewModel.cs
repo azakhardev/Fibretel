@@ -1,4 +1,4 @@
-namespace RealEstate.Models
+namespace Fibretel.Models
 {
     public class ErrorViewModel
     {
