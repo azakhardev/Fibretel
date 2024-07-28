@@ -1,6 +1,7 @@
 ﻿using Fibretel.Models;
 using Fibretel.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
 namespace Fibretel.Controllers
@@ -22,9 +23,10 @@ namespace Fibretel.Controllers
         [HttpGet]
         public IActionResult Detail(int id)
         {
-            Service offer = myDb.Services.Find(id);
-            ViewBag.Photos = myDb.Photos.Where(x => x.ServiceId == id).ToList();
-            return View(offer);
+            //Service service = myDb.Services.Find(id);
+            Service service = myDb.Services.Include(x => x.Photos).Where(x => x.Id == id).FirstOrDefault();
+            //ViewBag.Photos = myDb.Photos.Where(x => x.ServiceId == id).ToList();
+            return View(service);
         }
     }
 }

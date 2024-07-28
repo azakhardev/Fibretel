@@ -2,10 +2,65 @@
 @using Fibretel.Models.Dto;
 @using Fibretel.Models.Entities;
 @model Service
+
 <head>
     <link rel="stylesheet" href="~/css/offerDetail.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 @{
     ViewData["Title"] = Model.Name;
+    int counter = 0;
 }
+
+<content>
+    <h1>
+        @Model.Name
+    </h1>
+
+    <div>
+        <img src="~/@Model.Photo" />
+    </div>
+
+    <div>
+        <p id="descriptionBig">
+            @Model.Description
+        </p>
+    </div>
+
+    <h3>O naší službě</h3>
+
+    <div class="photos">
+        @foreach (Photo photo in Model.Photos)
+        {
+            <hr />
+            @if (counter % 2 == 0)
+            {
+                <div class="photo photo-left">
+                    <div>
+                        <img src="~/@photo.Path" />
+                    </div>
+                    <div>
+                        <p>@photo.Text</p>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="photo photo-right">
+                    <div>
+                        <img src="~/@photo.Path" />
+                    </div>
+                    <div>
+                        <p>@photo.Text</p>
+                    </div>
+                </div>
+            }
+            counter++;
+        }
+    </div>
+
+    <a class="request" asp-controller="Contacts" asp-action="Index" asp-route-serviceName="@Model.Name">Mám zájem</a>
+</content>

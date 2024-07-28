@@ -42,9 +42,12 @@
             counter++;
         }
     </div>
-    <div>
-        <button class="btn-more">Více</button>
-    </div>
+    @if (ViewBag.Services.Count > 6)
+    {
+        <div>
+            <button class="btn-more">Více</button>
+        </div>
+    }
 </content>
 
 <div style="height:5px;"></div>

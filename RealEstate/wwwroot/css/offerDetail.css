@@ -1,1 +1,139 @@
-﻿
+﻿.photo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.photos {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+h1 {
+    margin-block:15px;
+}
+
+hr {
+    margin-block:10px;
+}
+
+.photo div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1
+}
+
+#descriptionBig {
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.photo p {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+a:hover {
+    color: white;
+}
+
+.request {
+    width: 98%;
+    max-width: 370px;
+    margin-inline: 1%;
+    margin-block: 10px;
+    padding-inline: 25px;
+    padding-block: 10px;
+    border-radius: 15px;
+    background: rgb(177,177,184);
+    background: linear-gradient(90deg, rgba(177,177,184,1) 0%, rgba(0,99,255,1) 100%);
+    text-align: center;
+    color: white;
+    font-size: larger;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+
+    h1 {
+        margin-bottom: 35px;
+    }
+
+    .photo {
+        gap:0px;
+    }
+    .photos {
+        gap: 40px;
+        width: 80vw
+    }
+
+    #descriptionBig {
+        width: 80vw
+    }
+
+    .photo div:nth-child(even) {
+        background-color: rgb(128, 128, 128, 0.1);        
+    }
+
+    .photo p {
+        padding-inline: 10%;
+        font-weight: bold;
+        overflow: scroll;
+        padding-block:15px;
+        margin:0;
+        max-height:20vh;
+    }
+
+    .photo-left {
+        flex-direction: row;
+    }
+
+    .photo-right {
+        flex-direction: row-reverse;
+    }
+
+    .request {
+        margin-block: 25px;
+        max-width: 450px;
+    }
+}
+
+@media (min-width: 1680px) {
+    .photos {
+        gap: 55px;
+        width: 60vw
+    }
+
+    .photo p {
+        max-height: 30vh;
+    }
+
+    #descriptionBig {
+        width: 60vw
+    }
+}
+
+@media (min-width: 1920px) {
+    h1 {
+        margin-bottom: 50px;
+    }
+    .photos {
+        gap: 85px;
+    }
+
+    .photo p {
+        max-height: 32vh;
+    }
+}

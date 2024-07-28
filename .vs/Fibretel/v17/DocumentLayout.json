@@ -3,20 +3,40 @@
   "WorkspaceRootPath": "D:\\GitHub\\Fibratel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|d:\\github\\fibratel\\realestate\\views\\admin\\editservice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|solutionrelative:realestate\\views\\admin\\editservice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|d:\\github\\fibratel\\realestate\\views\\offer\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|solutionrelative:realestate\\views\\offer\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|d:\\github\\fibratel\\realestate\\wwwroot\\css\\adminservice.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|solutionrelative:realestate\\wwwroot\\css\\adminservice.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|d:\\github\\fibratel\\realestate\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|solutionrelative:realestate\\controllers\\contactscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|d:\\github\\fibratel\\realestate\\controllers\\superioradmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|solutionrelative:realestate\\controllers\\superioradmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|d:\\github\\fibratel\\realestate\\controllers\\offercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|solutionrelative:realestate\\controllers\\offercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|d:\\github\\fibratel\\realestate\\wwwroot\\css\\offerdetail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|solutionrelative:realestate\\wwwroot\\css\\offerdetail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|d:\\github\\fibratel\\realestate\\views\\offer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|solutionrelative:realestate\\views\\offer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|d:\\github\\fibratel\\realestate\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|solutionrelative:realestate\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|d:\\github\\fibratel\\realestate\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|solutionrelative:realestate\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|d:\\github\\fibratel\\realestate\\views\\admin\\editservice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|solutionrelative:realestate\\views\\admin\\editservice.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|d:\\github\\fibratel\\realestate\\controllers\\superioradmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|solutionrelative:realestate\\controllers\\superioradmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D385F250-D8E3-4F8E-AEAC-47CD9EA9D65C}|RealEstate\\Fibretel.csproj|d:\\github\\fibratel\\realestate\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,50 +50,114 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "adminService.css",
-              "DocumentMoniker": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\css\\adminService.css",
-              "RelativeDocumentMoniker": "RealEstate\\wwwroot\\css\\adminService.css",
-              "ToolTip": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\css\\adminService.css",
-              "RelativeToolTip": "RealEstate\\wwwroot\\css\\adminService.css",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAACQAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-07-25T08:03:40.953Z",
+              "Title": "ContactsController.cs",
+              "DocumentMoniker": "D:\\GitHub\\Fibratel\\RealEstate\\Controllers\\ContactsController.cs",
+              "RelativeDocumentMoniker": "RealEstate\\Controllers\\ContactsController.cs",
+              "ToolTip": "D:\\GitHub\\Fibratel\\RealEstate\\Controllers\\ContactsController.cs",
+              "RelativeToolTip": "RealEstate\\Controllers\\ContactsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T16:42:30.842Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EditService.cshtml",
-              "DocumentMoniker": "D:\\GitHub\\Fibratel\\RealEstate\\Views\\Admin\\EditService.cshtml",
-              "RelativeDocumentMoniker": "RealEstate\\Views\\Admin\\EditService.cshtml",
-              "ToolTip": "D:\\GitHub\\Fibratel\\RealEstate\\Views\\Admin\\EditService.cshtml",
-              "RelativeToolTip": "RealEstate\\Views\\Admin\\EditService.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "DocumentIndex": 5,
+              "Title": "home.css",
+              "DocumentMoniker": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\css\\home.css",
+              "RelativeDocumentMoniker": "RealEstate\\wwwroot\\css\\home.css",
+              "ToolTip": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\css\\home.css",
+              "RelativeToolTip": "RealEstate\\wwwroot\\css\\home.css",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAD4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-07-28T16:14:29.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\GitHub\\Fibratel\\RealEstate\\Views\\Offer\\Index.cshtml",
+              "RelativeDocumentMoniker": "RealEstate\\Views\\Offer\\Index.cshtml",
+              "ToolTip": "D:\\GitHub\\Fibratel\\RealEstate\\Views\\Offer\\Index.cshtml",
+              "RelativeToolTip": "RealEstate\\Views\\Offer\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-24T12:12:24.388Z",
+              "WhenOpened": "2024-07-27T13:45:54.364Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "offerDetail.css",
+              "DocumentMoniker": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\css\\offerDetail.css",
+              "RelativeDocumentMoniker": "RealEstate\\wwwroot\\css\\offerDetail.css",
+              "ToolTip": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\css\\offerDetail.css",
+              "RelativeToolTip": "RealEstate\\wwwroot\\css\\offerDetail.css",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAAAIgAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-07-26T16:21:11.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OfferController.cs",
+              "DocumentMoniker": "D:\\GitHub\\Fibratel\\RealEstate\\Controllers\\OfferController.cs",
+              "RelativeDocumentMoniker": "RealEstate\\Controllers\\OfferController.cs",
+              "ToolTip": "D:\\GitHub\\Fibratel\\RealEstate\\Controllers\\OfferController.cs",
+              "RelativeToolTip": "RealEstate\\Controllers\\OfferController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T16:06:03.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "D:\\GitHub\\Fibratel\\RealEstate\\Views\\Offer\\Detail.cshtml",
+              "RelativeDocumentMoniker": "RealEstate\\Views\\Offer\\Detail.cshtml",
+              "ToolTip": "D:\\GitHub\\Fibratel\\RealEstate\\Views\\Offer\\Detail.cshtml",
+              "RelativeToolTip": "RealEstate\\Views\\Offer\\Detail.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEEAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-26T15:57:50.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EditService.cshtml",
+              "DocumentMoniker": "D:\\GitHub\\Fibratel\\RealEstate\\Views\\Admin\\EditService.cshtml",
+              "RelativeDocumentMoniker": "RealEstate\\Views\\Admin\\EditService.cshtml",
+              "ToolTip": "D:\\GitHub\\Fibratel\\RealEstate\\Views\\Admin\\EditService.cshtml",
+              "RelativeToolTip": "RealEstate\\Views\\Admin\\EditService.cshtml",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAACAAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-24T12:12:24.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "AdminController.cs",
               "DocumentMoniker": "D:\\GitHub\\Fibratel\\RealEstate\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "RealEstate\\Controllers\\AdminController.cs",
               "ToolTip": "D:\\GitHub\\Fibratel\\RealEstate\\Controllers\\AdminController.cs",
               "RelativeToolTip": "RealEstate\\Controllers\\AdminController.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAewC4AAAAhAAAA",
+              "ViewState": "AQIAADIAAAAAAAAAAIA0wC4AAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-07T12:08:47.877Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "SuperiorAdminController.cs",
               "DocumentMoniker": "D:\\GitHub\\Fibratel\\RealEstate\\Controllers\\SuperiorAdminController.cs",
               "RelativeDocumentMoniker": "RealEstate\\Controllers\\SuperiorAdminController.cs",
@@ -81,12 +165,11 @@
               "RelativeToolTip": "RealEstate\\Controllers\\SuperiorAdminController.cs",
               "ViewState": "AQIAAGAAAAAAAAAAAAAmwAUAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T13:51:57.356Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T13:51:57.356Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\GitHub\\Fibratel\\RealEstate\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "RealEstate\\Controllers\\HomeController.cs",

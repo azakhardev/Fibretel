@@ -8,9 +8,14 @@ namespace Fibretel.Controllers
     {
         MyDatabase myDb = new MyDatabase();
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(string serviceName = null)
         {
-            ViewBag.Services = myDb.Services.Select(x => x.Name).ToList();
+            this.ViewBag.Services = myDb.Services.Select(x => x.Name).ToList();
+            this.ViewBag.ServiceName = "";
+
+            if(serviceName != null)
+                this.ViewBag.ServiceName = serviceName;
+
             return View(new Request());
         }
 
