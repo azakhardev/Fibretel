@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Fibretel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1fd1daebde182e933a9659bcf4eb92c9e731f68")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c628b88e1a10f4d67137900a1e8b5d27cde2716")]
 [assembly: System.Reflection.AssemblyProductAttribute("Fibretel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Fibretel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

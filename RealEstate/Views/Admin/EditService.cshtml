@@ -39,8 +39,8 @@
         </div>
         <div class="form-group mb-2">
             <label>Titulní obrázek:</label>
-            <input type="file" asp-for="Service.Photo" class="form-control" />
-            <span asp-validation-for="Service.Photo" class="text-danger"></span>
+            <input type="file" asp-for="Photo" class="form-control" />
+            <span asp-validation-for="Photo" class="text-danger"></span>
         </div>
 
         <h3>Obrázky a jejich popisky v přehledu služby</h3>
@@ -51,7 +51,7 @@
                 <hr />
                 <div class="form-group">
                     <div class="image-wrap vcenter">
-                        <img src="~/@Model.Photos[i].Path" />
+                        <img src="~/@Model.Photos[i].PhotoPath" />
                     </div>
                     <div>
                         <input type="hidden" asp-for="@Model.Photos[i].Id" />
@@ -60,7 +60,7 @@
                     <div class="fileSelect vcenter">
                         <div>
                             <label>Soubor:</label>
-                            <input type="file" asp-for="@Model.Photos[i].Path" class="form-control" />
+                            <input type="file" asp-for="@Model.Photos[i].Photo" class="form-control" />
                         </div>
                     </div>
                     <div class="textInput vcenter">
@@ -75,17 +75,21 @@
                 </div>
             }
         </div>
-        <div>
-            <button type="button" id="addPhoto">Přidat novou fotografii</button>
+        <div class="button-center">
+            <button class="btn btn-info" type="button" id="addPhoto">Přidat novou fotografii</button>
         </div>
         <div>
             @if (ViewBag.Action == "Add")
             {
-                <button class="btn btn-success mt-2">Přidat</button>
+                <div class="button-right">
+                    <button class="btn btn-success mt-2">Přidat</button>
+                </div>
             }
             else
             {
-                <button class="btn btn-success mt-2">Uložit</button>
+                <div class="button-right">
+                    <button class="btn btn-success mt-2">Uložit</button>
+                </div>
             }
         </div>
     </form>
@@ -132,7 +136,7 @@
         const inputPath = document.createElement('input');
         inputPath.type = 'file';
         inputPath.classList.add('form-control');
-        inputPath.name = `Photos[${photosCount}].Path`;
+        inputPath.name = `Photos[${photosCount}].Photo`;
 
         const div1 = document.createElement('div');
 
@@ -178,7 +182,7 @@
         buttonDelete.type = 'button';
         buttonDelete.classList.add('btn');
         buttonDelete.classList.add('btn-danger');
-        buttonDelete.innerText = 'Odebrat';        
+        buttonDelete.innerText = 'Odebrat';
 
         buttonDelete.addEventListener('click', c => {
             hr.remove();

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nxMBlIu3RFBvInRjgbmHurrN54+W7pOV2Gr+3BCHQPo=",
+  "Hash": "2JY0AlB3zQCsjOx1FRvYcfC/8WgzSbBrSK94dpcT+bk=",
   "Source": "Fibretel",
   "BasePath": "_content/Fibretel",
   "Mode": "Default",
@@ -490,6 +490,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Main\\placeholderFullHD2.png"
+    },
+    {
+      "Identity": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Services\\Instalace zachodu1_Arthas обои.jpg",
+      "SourceId": "Fibretel",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\",
+      "BasePath": "_content/Fibretel",
+      "RelativePath": "Images/Services/Instalace zachodu1_Arthas обои.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Services\\Instalace zachodu1_Arthas обои.jpg"
     },
     {
       "Identity": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Services\\Property_1.jpg",

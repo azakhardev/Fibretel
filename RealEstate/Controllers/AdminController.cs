@@ -34,13 +34,20 @@ namespace Fibretel.Controllers
         [HttpGet]
         public IActionResult EditService(int id)
         {
-            ServiceDto service = new ServiceDto();
+            ServiceDto service = new ServiceDto();            
             ViewBag.Action = "Add";
 
             if (id != 0)
             {
                 service.Service = myDb.Services.Find(id);
-                service.Photos = myDb.Photos.Where(x => x.ServiceId == id).ToList();
+                List<Photo> photos = myDb.Photos.Where(x => x.ServiceId == id).ToList();
+                List<PhotoDto> photosDto = new List<PhotoDto>();
+                foreach (Photo photo in photos)
+                {
+                    PhotoDto p = new PhotoDto() { Id = photo.Id, PhotoPath = photo.Path, ServiceId = photo.ServiceId, Text = photo.Text };
+                    photosDto.Add(p);
+                }
+                service.Photos = photosDto;
                 ViewBag.Action = "Edit";
             }
 
@@ -50,13 +57,23 @@ namespace Fibretel.Controllers
         [HttpPost]
         public IActionResult EditService(ServiceDto serviceDto)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.GetValidationState("Service.Name") == Microsoft.AspNetCore.Mvc.ModelBinding.ModelValidationState.Invalid)
                 return View(serviceDto);
 
             Log log = new Log();
             Service service = serviceDto.Service;
-
             Service updatedService = myDb.Services.Find(service.Id);
+
+            if (serviceDto.Photo != null)
+                service.Photo = $@"Images\\Services\\{service.Name}_{serviceDto.Photo.FileName}";
+            else if (updatedService != null)
+                service.Photo = updatedService.Photo;
+            else
+                ModelState.AddModelError("Photo", "Titulní foto je povinné");
+
+            if (!ModelState.IsValid)
+                return View(serviceDto);
+
             if (updatedService != null)
             {
                 updatedService.Name = service.Name;
@@ -67,6 +84,8 @@ namespace Fibretel.Controllers
                 if (updatedService.Photo != service.Photo)
                 {
                     //TODO: Upload new photo and delete old
+                    DeleteImage(updatedService.Photo);
+                    UploadImage(serviceDto.Photo, true, service.Name);                    
 
                     updatedService.Photo = service.Photo;
                 }
@@ -78,7 +97,7 @@ namespace Fibretel.Controllers
                 myDb.Services.Add(service);
 
                 //TODO: Upload photo to the web
-                
+                UploadImage(serviceDto.Photo, true, service.Name);
 
                 log = Logger.CreateLog(ViewBag.LoggedAs, "Správa služeb", $"Byla vytvořena služba {service.Name}");
             }
@@ -86,7 +105,7 @@ namespace Fibretel.Controllers
             myDb.Logs.Add(log);
 
             if (serviceDto.Photos.Any())
-                SavePhotos(serviceDto.Photos);
+                SavePhotos(serviceDto.Photos, service.Name);
 
             myDb.SaveChanges();
 
@@ -95,7 +114,11 @@ namespace Fibretel.Controllers
 
         public IActionResult DeletePhoto(int id, int serviceId)
         {
-            myDb.Photos.Remove(myDb.Photos.Find(id));
+            Photo photo = myDb.Photos.Find(id);
+            myDb.Photos.Remove(photo);
+
+            DeleteImage(photo.Path);
+
             myDb.SaveChanges();
 
             return RedirectToAction("EditService", new { id = serviceId });
@@ -238,38 +261,98 @@ namespace Fibretel.Controllers
             return View();
         }
 
-        private void SavePhotos(List<Photo> photos)
+        private void SavePhotos(List<PhotoDto> photosDto, string serviceName)
         {
-            foreach (Photo photo in photos)
+            List<Photo> photos = new List<Photo>();
+            foreach (PhotoDto item in photosDto)
             {
-                if (!myDb.Photos.Contains(photo))
+                Photo p = new Photo() { Id = item.Id, ServiceId = item.ServiceId, Path = @$"Images\Gallery\{serviceName}_{item.Photo.Name}", Text = item.Text };
+
+                if (!myDb.Photos.Contains(p))
                 {
                     //TODO: Upload new photo
+                    UploadImage(item.Photo, false, serviceName);
 
-                    myDb.Photos.Add(photo);
+                    myDb.Photos.Add(p);
                 }
                 else
                 {
-                    Photo editedPhoto = myDb.Photos.Find(photo.Id);
-                    if (editedPhoto.Path != photo.Path)
+                    Photo editedPhoto = myDb.Photos.Find(p.Id);
+                    if (editedPhoto.Path != p.Path)
                     {
-                        FileInfo file = new FileInfo(@$"~/{editedPhoto.Path}");
-                        file.Delete();
+                        DeleteImage(editedPhoto.Path);
+                        UploadImage(item.Photo, false, serviceName);                        
 
-                        //TODO: Upload new photo
-
-                        editedPhoto.Path = photo.Path;
+                        editedPhoto.Path = p.Path;
                     }
-                    if (editedPhoto.Text != photo.Text)
-                        editedPhoto.Text = photo.Text;
+                    if (editedPhoto.Text != p.Text)
+                        editedPhoto.Text = p.Text;
                 }
+
+                photos.Add(p);
             }
+
+            //foreach (Photo photo in photos)
+            //{
+            //    if (!myDb.Photos.Contains(photo))
+            //    {
+            //        //TODO: Upload new photo
+
+            //        myDb.Photos.Add(photo);
+            //    }
+            //    else
+            //    {
+            //        Photo editedPhoto = myDb.Photos.Find(photo.Id);
+            //        if (editedPhoto.Path != photo.Path)
+            //        {
+            //            FileInfo file = new FileInfo(@$"~/{editedPhoto.Path}");
+            //            file.Delete();
+
+            //            //TODO: Upload new photo
+
+            //            editedPhoto.Path = photo.Path;
+            //        }
+            //        if (editedPhoto.Text != photo.Text)
+            //            editedPhoto.Text = photo.Text;
+            //    }
+            //}
             myDb.SaveChanges();
         }
 
-        private void UploadImage(string path) 
+        async private void UploadImage(IFormFile file, bool servicePhoto, string serviceName)
         {
-            string serverFolder = _webHostEnvironment.WebRootPath + path;
+
+            string path = "";
+            if (servicePhoto)
+                path = $@"\\Images\\Services\\{serviceName}_";
+            else
+                path = $@"\Images\Gallery\{serviceName}_";
+
+            string serverFolder = @$"{_webHostEnvironment.WebRootPath}{path}{file.FileName}";
+
+            try
+            {
+                await file.CopyToAsync(new FileStream(serverFolder, FileMode.Create));
+            }
+            catch (Exception)
+            {
+                Log log = Logger.CreateLog(ViewBag.LoggedAs, "Chyba systému", $"Nepodařilo se nahrát fotografii {file.FileName}, nejspíš již fotografie s takovým názvem existuje.");
+                myDb.Logs.Add(log);
+            }
+        }
+
+        private void DeleteImage(string path)
+        {
+            try
+            {
+                FileInfo file = new FileInfo(@$"{_webHostEnvironment.WebRootPath}\{path}");
+                file.Delete();
+            }
+            catch (Exception)
+            {
+                Log log = Logger.CreateLog(ViewBag.LoggedAs, "Chyba systému", $"Na serveru se nepodařilo smazat fotografii {path}");
+                myDb.Logs.Add(log);
+            }
         }
 
         private void SendEmail(string toEmail, string subject, string body)

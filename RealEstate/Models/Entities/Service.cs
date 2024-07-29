@@ -21,13 +21,11 @@ namespace Fibretel.Models.Entities
         public string Description { get; set; }
 
         [Required(ErrorMessage = "Služba musí mít minimální cenu")]
-        public int Price { get; set; }
-
-        [Required(ErrorMessage = "Služba musí mít titulní obrázek")]
+        public int Price { get; set; }        
         public string? Photo { get; set; }
         public int Requests { get; set; }
 
         [ForeignKey("ServiceId")]
-        public List<Photo> Photos { get; set; }
+        public List<Photo>? Photos { get; set; }
     }
 }
