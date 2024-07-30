@@ -7,6 +7,8 @@ using Fibretel.Models.Dto;
 using Fibretel.Models;
 using Fibretel.Models.Entities;
 using Microsoft.AspNetCore.Hosting;
+using static System.Net.Mime.MediaTypeNames;
+using Microsoft.AspNetCore.Mvc.TagHelpers;
 
 
 namespace Fibretel.Controllers
@@ -34,7 +36,7 @@ namespace Fibretel.Controllers
         [HttpGet]
         public IActionResult EditService(int id)
         {
-            ServiceDto service = new ServiceDto();            
+            ServiceDto service = new ServiceDto();
             ViewBag.Action = "Add";
 
             if (id != 0)
@@ -83,9 +85,8 @@ namespace Fibretel.Controllers
 
                 if (updatedService.Photo != service.Photo)
                 {
-                    //TODO: Upload new photo and delete old
                     DeleteImage(updatedService.Photo);
-                    UploadImage(serviceDto.Photo, true, service.Name);                    
+                    UploadImage(serviceDto.Photo, true, service.Name);
 
                     updatedService.Photo = service.Photo;
                 }
@@ -94,23 +95,22 @@ namespace Fibretel.Controllers
             }
             else
             {
+                service.Id = myDb.Services.OrderBy(x => x.Id).Last().Id + 1;
                 myDb.Services.Add(service);
-
-                //TODO: Upload photo to the web
+                
                 UploadImage(serviceDto.Photo, true, service.Name);
 
                 log = Logger.CreateLog(ViewBag.LoggedAs, "Správa služeb", $"Byla vytvořena služba {service.Name}");
             }
 
             myDb.Logs.Add(log);
-
-            if (serviceDto.Photos.Any())
-                SavePhotos(serviceDto.Photos, service.Name);
-
             myDb.SaveChanges();
 
+            if (serviceDto.Photos.Any())
+                SavePhotos(serviceDto);
+
             return RedirectToAction("Services");
-        }
+        }       
 
         public IActionResult DeletePhoto(int id, int serviceId)
         {
@@ -128,6 +128,9 @@ namespace Fibretel.Controllers
         public IActionResult DeleteService(int id)
         {
             Service service = myDb.Services.Find(id);
+            List<Photo> photos = myDb.Photos.Where(x => x.ServiceId == id).ToList();
+
+            DeleteImage(service.Photo);
 
             myDb.Services.Remove(service);
 
@@ -135,6 +138,11 @@ namespace Fibretel.Controllers
             myDb.Logs.Add(log);
 
             myDb.SaveChanges();
+
+            foreach (Photo photo in photos)
+            {
+                DeleteImage(photo.Path);
+            }
 
             return RedirectToAction("Services");
         }
@@ -261,62 +269,56 @@ namespace Fibretel.Controllers
             return View();
         }
 
-        private void SavePhotos(List<PhotoDto> photosDto, string serviceName)
+        private void SavePhotos(ServiceDto service)
         {
-            List<Photo> photos = new List<Photo>();
-            foreach (PhotoDto item in photosDto)
-            {
-                Photo p = new Photo() { Id = item.Id, ServiceId = item.ServiceId, Path = @$"Images\Gallery\{serviceName}_{item.Photo.Name}", Text = item.Text };
+            int counter = 0;
 
-                if (!myDb.Photos.Contains(p))
+            foreach (PhotoDto item in service.Photos)
+            {
+                Photo p = new Photo() { Id = Convert.ToInt32(item.Id), ServiceId = service.Service.Id, Text = item.Text };
+
+                if (item.Photo != null)                                    
+                    p.Path = @$"Images\Gallery\{service.Service.Name}_{item.Photo.FileName}";
+
+                if (p.Text == null)
+                    p.Text = "Text";
+
+                Photo editedPhoto = myDb.Photos.Find(p.Id);
+
+                if (editedPhoto == null)
                 {
-                    //TODO: Upload new photo
-                    UploadImage(item.Photo, false, serviceName);
+                    if (item.Photo == null) 
+                    {
+                        Log log = Logger.CreateLog(ViewBag.LoggedAs,"Správa služeb", $"Nenahráli jste fotografii pro službu {service.Service.Name} - nelze přidat pouze text bez fotografie");
+                        myDb.Logs.Add(log);
+                        continue;
+                    }        
+
+                    UploadImage(item.Photo, false, service.Service.Name);
 
                     myDb.Photos.Add(p);
                 }
                 else
                 {
-                    Photo editedPhoto = myDb.Photos.Find(p.Id);
-                    if (editedPhoto.Path != p.Path)
+                    if (editedPhoto.Path != p.Path && p.Path != null)
                     {
                         DeleteImage(editedPhoto.Path);
-                        UploadImage(item.Photo, false, serviceName);                        
+                        UploadImage(item.Photo, false, service.Service.Name);
 
                         editedPhoto.Path = p.Path;
                     }
                     if (editedPhoto.Text != p.Text)
                         editedPhoto.Text = p.Text;
                 }
-
-                photos.Add(p);
+                counter++;
             }
 
-            //foreach (Photo photo in photos)
-            //{
-            //    if (!myDb.Photos.Contains(photo))
-            //    {
-            //        //TODO: Upload new photo
-
-            //        myDb.Photos.Add(photo);
-            //    }
-            //    else
-            //    {
-            //        Photo editedPhoto = myDb.Photos.Find(photo.Id);
-            //        if (editedPhoto.Path != photo.Path)
-            //        {
-            //            FileInfo file = new FileInfo(@$"~/{editedPhoto.Path}");
-            //            file.Delete();
-
-            //            //TODO: Upload new photo
-
-            //            editedPhoto.Path = photo.Path;
-            //        }
-            //        if (editedPhoto.Text != photo.Text)
-            //            editedPhoto.Text = photo.Text;
-            //    }
-            //}
             myDb.SaveChanges();
+        }
+
+        public IActionResult MyRedirect() 
+        {
+            return View();
         }
 
         async private void UploadImage(IFormFile file, bool servicePhoto, string serviceName)
@@ -332,7 +334,9 @@ namespace Fibretel.Controllers
 
             try
             {
-                await file.CopyToAsync(new FileStream(serverFolder, FileMode.Create));
+                FileStream stream = new FileStream(serverFolder, FileMode.Create);
+                await file.CopyToAsync(stream);
+                stream.Close();
             }
             catch (Exception)
             {

@@ -4,7 +4,7 @@ namespace Fibretel.Models.Dto
 {
     public class PhotoDto
     {
-        public int Id { get; set; }
+        public int? Id { get; set; }
 
         public int ServiceId { get; set; }
 

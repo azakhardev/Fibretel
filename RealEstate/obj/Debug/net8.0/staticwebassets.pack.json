@@ -9,8 +9,52 @@
       "PackagePath": "staticwebassets\\Images\\Gallery\\CatGlasses.png"
     },
     {
+      "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Gallery\\Servis aut_BMW.jpg",
+      "PackagePath": "staticwebassets\\Images\\Gallery\\Servis aut_BMW.jpg"
+    },
+    {
+      "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Gallery\\Sluzba_Darth Vader.jpg",
+      "PackagePath": "staticwebassets\\Images\\Gallery\\Sluzba_Darth Vader.jpg"
+    },
+    {
+      "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Gallery\\Sluzba_Death Stranding Crater.jpg",
+      "PackagePath": "staticwebassets\\Images\\Gallery\\Sluzba_Death Stranding Crater.jpg"
+    },
+    {
+      "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Gallery\\Sluzba_Genji.jpg",
+      "PackagePath": "staticwebassets\\Images\\Gallery\\Sluzba_Genji.jpg"
+    },
+    {
+      "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Gallery\\Sluzba_Mando & Grogu.jpg",
+      "PackagePath": "staticwebassets\\Images\\Gallery\\Sluzba_Mando & Grogu.jpg"
+    },
+    {
+      "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Gallery\\Sluzba_Neon Car.jpg",
+      "PackagePath": "staticwebassets\\Images\\Gallery\\Sluzba_Neon Car.jpg"
+    },
+    {
+      "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Gallery\\Sluzba_Prey.png",
+      "PackagePath": "staticwebassets\\Images\\Gallery\\Sluzba_Prey.png"
+    },
+    {
+      "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Gallery\\Sluzba_cockstick.jpg",
+      "PackagePath": "staticwebassets\\Images\\Gallery\\Sluzba_cockstick.jpg"
+    },
+    {
+      "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Gallery\\Testovaci_Valhalla.jpg",
+      "PackagePath": "staticwebassets\\Images\\Gallery\\Testovaci_Valhalla.jpg"
+    },
+    {
       "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Gallery\\Woman.png",
       "PackagePath": "staticwebassets\\Images\\Gallery\\Woman.png"
+    },
+    {
+      "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Gallery\\asdf_Cyberpunk 2077 Militech.png",
+      "PackagePath": "staticwebassets\\Images\\Gallery\\asdf_Cyberpunk 2077 Militech.png"
+    },
+    {
+      "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Gallery\\asdf_Scorpion&Sub Zero.jpg",
+      "PackagePath": "staticwebassets\\Images\\Gallery\\asdf_Scorpion&Sub Zero.jpg"
     },
     {
       "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Main\\dog.jpg",
@@ -37,12 +81,28 @@
       "PackagePath": "staticwebassets\\Images\\Services\\Instalace zachodu1_Arthas обои.jpg"
     },
     {
-      "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Services\\Property_1.jpg",
-      "PackagePath": "staticwebassets\\Images\\Services\\Property_1.jpg"
+      "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Services\\Servis aut_Smoke & Car.jpg",
+      "PackagePath": "staticwebassets\\Images\\Services\\Servis aut_Smoke & Car.jpg"
+    },
+    {
+      "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Services\\Sluzba_Asus.jpg",
+      "PackagePath": "staticwebassets\\Images\\Services\\Sluzba_Asus.jpg"
+    },
+    {
+      "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Services\\Sluzba_BMW.jpg",
+      "PackagePath": "staticwebassets\\Images\\Services\\Sluzba_BMW.jpg"
+    },
+    {
+      "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Services\\Sluzba_Cyberpunk Nightcity.jpg",
+      "PackagePath": "staticwebassets\\Images\\Services\\Sluzba_Cyberpunk Nightcity.jpg"
     },
     {
       "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Services\\Toilet.jpg",
       "PackagePath": "staticwebassets\\Images\\Services\\Toilet.jpg"
+    },
+    {
+      "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Services\\asdf_Darth Vader.jpg",
+      "PackagePath": "staticwebassets\\Images\\Services\\asdf_Darth Vader.jpg"
     },
     {
       "Id": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\css\\about.css",
