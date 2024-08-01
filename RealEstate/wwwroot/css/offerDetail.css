@@ -10,8 +10,13 @@
     gap: 25px;
 }
 
-h1 {
+content h1 {
     margin-block:15px;
+    font-stretch: ultra-expanded;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    color: cornflowerblue;
+    font-size: 50px
 }
 
 hr {
@@ -67,8 +72,9 @@ a:hover {
 
 @media (min-width: 768px) {
 
-    h1 {
+    content h1 {
         margin-bottom: 35px;
+        font-size:75px;
     }
 
     .photo {
@@ -126,8 +132,9 @@ a:hover {
 }
 
 @media (min-width: 1920px) {
-    h1 {
+    content h1 {
         margin-bottom: 50px;
+        font-size: 85px;
     }
     .photos {
         gap: 85px;

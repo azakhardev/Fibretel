@@ -62,8 +62,12 @@
             <input type="email" asp-for="Account.Email" class="form-control" />
             <span asp-validation-for="Account.Email" class="text-danger"></span>
         </div>
-        <div class="button-add">
+        <div class="button-right">
             <button class="btn btn-success">Vytvořit</button>
         </div>
     </form>
 </div>
+
+<script>
+    document.querySelector('#accounts-management').classList.add('active');
+</script>

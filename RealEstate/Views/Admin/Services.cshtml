@@ -6,10 +6,12 @@
     ViewData["Title"] = "Administrace";
     Layout = "_AdminLayout";
     int counter = 1;
+    // int serviceId = 0;
 }
 
 <head>
     <link rel="stylesheet" href="~/css/tables.css" />
+    <link rel="stylesheet" href="~/css/dialogs.css" />
 </head>
 
 @if (ViewBag.Services.Count > 0)
@@ -33,7 +35,7 @@
                         <td>@service.Price Kč</td>
                         <td class="buttons">
                             <a class="btn btn-primary" asp-controller="Admin" asp-action="EditService" asp-route-id="@service.Id">Upravit</a>
-                            <a class="btn btn-danger" asp-controller="Admin" asp-action="DeleteService" asp-route-id="@service.Id">Smazat</a>
+                            <a class="btn btn-danger" onclick="showDialogDelete('@service.Id')">Odstranit</a>
                         </td>
                     </tr>
                     counter++;
@@ -41,6 +43,13 @@
             </tbody>
         </table>
     </div>
+    <dialog id="deleteDialog">
+        <p>Určitě chcete tuto službu smazat?</p>
+        <div class="d-flex flex-row justify-content-between">
+            <a id="deleteConfirmButton" class="btn btn-success">Ano</a>
+            <a class="btn btn-danger" onclick="closeDialog()">Ne</a>
+        </div>
+    </dialog>
 }
 else
 {
@@ -48,9 +57,23 @@ else
         <p>Zatím nenabízíte žádné služby :(</p>
     </div>
 }
-<div class="button-add">
+<div class="button-right">
     <a class="btn btn-success" asp-controller="Admin" asp-action="EditService">Přidat</a>
 </div>
 <script>
-    document.querySelector('#services').classList.add('active');   
+    document.querySelector('#services').classList.add('active');
+    const dialog = document.querySelector('#deleteDialog');
+    let serviceId = 0;
+
+    function showDialogDelete(id) {        
+        serviceId = id;
+        dialog.showModal();
+        document.getElementById('deleteConfirmButton').setAttribute('href', `/Admin/DeleteService/${id}`);
+    }
+
+    function closeDialog() {
+        serviceId = 0;
+        dialog.close();
+    }
+
 </script>

@@ -5,10 +5,10 @@
     gap:5px;
 }
 
-.button-add {
+.button-right {
     display:flex;
     justify-content:end;    
-    margin: 10px 20px;
+    margin: 10px 4px;
 }
 
 .table-wrap {
@@ -16,13 +16,15 @@
     overflow-y: scroll;
 }
 
-
-
 @media (min-width: 768px) {
     table {
         margin-block: 10px;
         margin-inline: 15px;
         width: 98% !important;        
+    }
+
+    .button-right {
+        margin-inline: 20px;
     }
 
     .buttons {

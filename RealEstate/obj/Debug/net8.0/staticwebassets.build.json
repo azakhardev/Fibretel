@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LtLnOW1HRDYBAQutfa+YhVYh2pPnbyZgrgPi9V0v/WQ=",
+  "Hash": "gZ/VQ0yWvDi62rt3IrHfohXZpxYIuOGB7ywOLq1/040=",
   "Source": "Fibretel",
   "BasePath": "_content/Fibretel",
   "Mode": "Default",
@@ -815,12 +815,12 @@
       "OriginalItemSpec": "wwwroot\\Images\\Services\\Sluzba_Cyberpunk Nightcity.jpg"
     },
     {
-      "Identity": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Services\\Toilet.jpg",
+      "Identity": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\Images\\Services\\Testovaci_sluzba-servis.jpg",
       "SourceId": "Fibretel",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\",
       "BasePath": "_content/Fibretel",
-      "RelativePath": "Images/Services/Toilet.jpg",
+      "RelativePath": "Images/Services/Testovaci_sluzba-servis.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -831,7 +831,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Services\\Toilet.jpg"
+      "OriginalItemSpec": "wwwroot\\Images\\Services\\Testovaci_sluzba-servis.jpg"
     },
     {
       "Identity": "D:\\GitHub\\Fibratel\\RealEstate\\wwwroot\\js\\about.js",
