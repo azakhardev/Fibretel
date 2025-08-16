@@ -1,0 +1,110 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code settings
+.history/
+*.code-workspace
+
+# DotCover
+.idea/
+*.dotCover
+
+# User-specific files
+*.rsuser
+*.user
+*.suo
+*.userprefs
+*.pidb
+*.svclog
+*.scc
+
+# Mono
+mono_crash.*
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Tye
+.tye/
+
+# Others
+*.dbmdl
+*.bak
+*.backup
+*.ldf
+*.mdf
+*.ndf
+
+# NuGet
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.nuget.props
+*.nuget.targets
+# packages/ can be ignored unless you have a solution-level packages directory
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget
+
+# Entity Framework
+*.jfm
+
+# MSBuild binary and object files
+*.cache
+*.obj
+*.exe
+*.pdb
+*.dll
+*.tlh
+*.tli
+*.tmp
+*.log
+*.vspscc
+*.vssscc
+*.build.csdef
+*.csproj.user
+*.dbproj.schemaview
+*.pfx
+*.publishsettings
+orleans.codegen.cs
+
+# Rider
+.idea/
+
+# JetBrains Rider
+*.sln.iml
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# DotCover is a code coverage tool
+*.dotCover
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Dump files
+*.stackdump
+*.dmp
+
+# Others
+*.tmp
+*.bak
+*.swp
+*~
